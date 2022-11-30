@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: securebanking-platform-config
 data:
+  BASE_FQDN: shaunharrisonfr.forgerock.financial
   IG_FQDN: obdemo.shaunharrisonfr.forgerock.financial
   RS_FQDN: rs.shaunharrisonfr.forgerock.financial
   RCS_FQDN: rcs.shaunharrisonfr.forgerock.financial
