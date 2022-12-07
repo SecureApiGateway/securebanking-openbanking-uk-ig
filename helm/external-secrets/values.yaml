@@ -1,25 +1,3 @@
-  deployment:  
-  imageOverride:
-    enabled: true
-    repo: eu.gcr.io/sbat-gcr-develop/securebanking
-    iam_initializer_image_name: secureopenbanking-uk-iam-initializer
-    iam_initializer_image_tag: latest
-  imagePullPolicy: Always
-
-# ** Value Name:** iam_initializer_image_location
-#
-# ** Value Description** 
-# Location of the image in your docker repository. Override this in your own values file.
-# The template expects a tpl value, which enables the image location to be built up from
-# values containing repo location, image name etc. e.g.
-# 
-#  # Values from file
-#  helm_repository: eu.gcr.io/sbat-gcr-develop/securebanking
-#  iam_initializer_image_name: secureopenbanking-uk-iam-initializer
-#  iam_initializer_image_tag: latest
-#  iam_initializer_image_location: "{{ .Values.helm_repository }}/{{ .Values.iam_initializer_image_name }}:{{ .Values.iam_initializer_image_tag}}"
-
-
 # environment.type: It can be:
 # CDK value: (Cloud Developer's Kit) development identity platform
 # CDM value: CDM (Cloud Deployment Model) identity cloud platform
