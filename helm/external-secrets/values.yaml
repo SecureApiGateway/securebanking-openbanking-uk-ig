@@ -1,0 +1,20 @@
+# environment.type: It can be:
+# CDK value: (Cloud Developer's Kit) development identity platform
+# CDM value: CDM (Cloud Deployment Model) identity cloud platform
+# FIDC value: FIDC (Forgerock Identity Cloud) identity cloud platform
+environment:
+  # Configuration relating to the FR Platform
+  fr_platform:
+    type: FIDC
+    fqdn: openam-forgerock-securebankingaccelerato.forgeblocks.com
+  # Configuration relation to the SBAT deployment
+  sbat: 
+    # The GCP project in which the SBAT is deployed
+    projectId: sbat-dev
+    fqdn: nightly.forgerock.financial
+  
+  # RaiseForStatus will exit if go resty returns an error in STRICT mode,
+  # be it client error, server error or other. Turning off (false)
+  # STRICT mode will simply warn of client/server errors.
+  strict: true
+  cdmadminpassword: change
