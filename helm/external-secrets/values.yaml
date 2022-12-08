@@ -6,12 +6,12 @@ environment:
   # Configuration relating to the FR Platform
   fr_platform:
     type: FIDC
-    fqdn: iam.dev.forgerock.financial
+    fqdn: openam-forgerock-securebankingaccelerato.forgeblocks.com
   # Configuration relation to the SBAT deployment
   sbat: 
     # The GCP project in which the SBAT is deployed
     projectId: sbat-dev
-    fqdn: dev.forgerock.financial
+    fqdn: nightly.forgerock.financial
   
   # RaiseForStatus will exit if go resty returns an error in STRICT mode,
   # be it client error, server error or other. Turning off (false)
