@@ -29,8 +29,6 @@ spec:
             - name: TRUSTSTORE_PATH
               value: /truststore/igtruststore
             - name: TRUSTSTORE_PASSWORD
-              value: changeit
-            - name: TRUSTSTORE_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   name: securebanking-platform-config
