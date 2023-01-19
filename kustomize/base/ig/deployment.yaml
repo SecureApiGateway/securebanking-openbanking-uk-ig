@@ -26,6 +26,7 @@ spec:
               mountPath: /var/run/secrets/truststore
           command: [ "/home/forgerock/import-pem-certs.sh" ]
           env:
+            # Path of the new truststore to create
             - name: TRUSTSTORE_PATH
               value: /truststore/igtruststore
             - name: TRUSTSTORE_PASSWORD
@@ -33,6 +34,7 @@ spec:
                 configMapKeyRef:
                   name: securebanking-platform-config
                   key: IG_TRUSTSTORE_PASSWORD
+            # Path to the pem file containing the certs to copy into the new truststore
             - name: IG_PEM_TRUSTSTORE
               value: "/var/run/secrets/truststore/ig-truststore.pem"
 
