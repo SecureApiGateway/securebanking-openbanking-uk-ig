@@ -22,16 +22,12 @@ data:
   IG_AGENT_ID: ig-agent
   IG_AGENT_PASSWORD: password
   IG_RCS_SECRET: password
-  IG_TRUSTSTORE_PASSWORD: changeit
   IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
-  CERT_ISSUER: null-issuer
-  ASPSP_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
-  ASPSP_KEYSTORE_PASSWORD: password
-  ASPSP_JWTSIGNER_ALIAS: jwtsigner
-  ASPSP_JWTSIGNER_KID: NTOZs+cHZSyO0p0AKPuHctl2ddc=
-  CA_KEYSTORE_PATH: /secrets/test-trusted-directory/ca.p12
-  CA_KEYSTORE_TYPE: PKCS12
-  CA_KEYSTORE_STOREPASS: Passw0rd
-  CA_KEYSTORE_KEYPASS: Passw0rd
-  CA_KEYSTORE_ALIAS: ca
-  TEST_DIRECTORY_SIGNING_KEY_PATH: /secrets/test-trusted-directory/test-trusted-directory-signing-key.p12
+  IG_CERT_ISSUER: null-issuer
+  IG_ASPSP_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
+  IG_ASPSP_JWTSIGNER_ALIAS: jwtsigner
+  IG_ASPSP_JWTSIGNER_KID: NTOZs+cHZSyO0p0AKPuHctl2ddc=
+  IG_CA_KEYSTORE_PATH: /secrets/test-trusted-directory/ca.p12
+  IG_CA_KEYSTORE_TYPE: PKCS12
+  IG_CA_KEYSTORE_ALIAS: ca
+  IG_TEST_DIRECTORY_SIGNING_KEY_PATH: /secrets/test-trusted-directory/test-trusted-directory-signing-key.p12
