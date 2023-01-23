@@ -22,7 +22,6 @@ data:
   IG_AGENT_ID: ig-agent
   IG_AGENT_PASSWORD: password
   IG_RCS_SECRET: password
-  IG_SSA_SECRET: password
   IG_TRUSTSTORE_PASSWORD: changeit
   IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
   CERT_ISSUER: null-issuer
@@ -35,5 +34,4 @@ data:
   CA_KEYSTORE_STOREPASS: Passw0rd
   CA_KEYSTORE_KEYPASS: Passw0rd
   CA_KEYSTORE_ALIAS: ca
-  CA_KEK: Syz1K5XQCZtq7FkE+GNvgZPeFyvUXJdemIW7CQjM18U=
   TEST_DIRECTORY_SIGNING_KEY_PATH: /secrets/test-trusted-directory/test-trusted-directory-signing-key.p12
