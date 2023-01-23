@@ -24,6 +24,7 @@ data:
   IG_RCS_SECRET: password
   IG_SSA_SECRET: password
   IG_TRUSTSTORE_PASSWORD: changeit
+  IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
   CERT_ISSUER: null-issuer
   ASPSP_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
   ASPSP_KEYSTORE_PASSWORD: password

@@ -63,7 +63,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
           - name: new-truststore
-            mountPath: /var/ig/secrets
+            mountPath: /var/ig/secrets/truststore
             readOnly: true
           - name: ig-ob-signing-key
             mountPath: /var/ig/secrets/open-banking
