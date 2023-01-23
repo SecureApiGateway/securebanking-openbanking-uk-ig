@@ -22,7 +22,6 @@ data:
   IG_AGENT_ID: ig-agent
   IG_AGENT_PASSWORD: password
   IG_RCS_SECRET: password
-  IG_SSA_SECRET: password
   IG_TRUSTSTORE_PASSWORD: changeit
   IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
   CERT_ISSUER: null-issuer
