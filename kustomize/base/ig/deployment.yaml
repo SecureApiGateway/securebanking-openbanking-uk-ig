@@ -70,6 +70,9 @@ spec:
             mountPath: /var/ig/secrets/ig-ob-signing-key.p12
             readOnly: true
             subPath: ig-ob-signing-key.p12
+          - name: test-trusted-dir-keys
+            mountPath: /var/ig/secrets/test-trusted-directory
+            readOnly: true
         livenessProbe:
           httpGet:
             path: /kube/liveness
@@ -98,4 +101,8 @@ spec:
         - name: ig-ob-signing-key
           secret:
             secretName: ig-ob-signing-key
+            optional: false
+        - name: test-trusted-dir-keys
+          secret:
+            secretName: test-trusted-dir-keys
             optional: false
