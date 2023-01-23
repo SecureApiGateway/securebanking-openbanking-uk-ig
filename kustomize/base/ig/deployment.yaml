@@ -63,9 +63,14 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
           - name: new-truststore
-            mountPath: /var/ig/secrets/igtruststore
+            mountPath: /var/ig/secrets/truststore
             readOnly: true
-            subPath: igtruststore
+          - name: ig-ob-signing-key
+            mountPath: /var/ig/secrets/open-banking
+            readOnly: true
+          - name: test-trusted-dir-keys
+            mountPath: /var/ig/secrets/test-trusted-directory
+            readOnly: true
         livenessProbe:
           httpGet:
             path: /kube/liveness
@@ -90,4 +95,12 @@ spec:
         - name: ig-truststore-pem
           secret:
             secretName: ig-truststore-pem
+            optional: false
+        - name: ig-ob-signing-key
+          secret:
+            secretName: ig-ob-signing-key
+            optional: false
+        - name: test-trusted-dir-keys
+          secret:
+            secretName: test-trusted-dir-keys
             optional: false
