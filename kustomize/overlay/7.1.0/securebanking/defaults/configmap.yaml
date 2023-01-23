@@ -25,7 +25,7 @@ data:
   IG_SSA_SECRET: password
   IG_TRUSTSTORE_PASSWORD: changeit
   CERT_ISSUER: null-issuer
-  ASPSP_KEYSTORE_PATH: /secrets/ig-ob-signing-key.p12
+  ASPSP_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
   ASPSP_KEYSTORE_PASSWORD: password
   ASPSP_JWTSIGNER_ALIAS: jwtsigner
   ASPSP_JWTSIGNER_KID: NTOZs+cHZSyO0p0AKPuHctl2ddc=

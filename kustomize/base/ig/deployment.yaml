@@ -63,13 +63,11 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
           - name: new-truststore
-            mountPath: /var/ig/secrets/igtruststore
+            mountPath: /var/ig/secrets
             readOnly: true
-            subPath: igtruststore
           - name: ig-ob-signing-key
-            mountPath: /var/ig/secrets/ig-ob-signing-key.p12
+            mountPath: /var/ig/secrets/open-banking
             readOnly: true
-            subPath: ig-ob-signing-key.p12
           - name: test-trusted-dir-keys
             mountPath: /var/ig/secrets/test-trusted-directory
             readOnly: true
