@@ -31,8 +31,8 @@ spec:
               value: /truststore/igtruststore
             - name: TRUSTSTORE_PASSWORD
               valueFrom:
-                configMapKeyRef:
-                  name: securebanking-platform-config
+                secretKeyRef:
+                  name: openig-secrets-env
                   key: IG_TRUSTSTORE_PASSWORD
             # Path to the pem file containing the certs to copy into the new truststore
             - name: IG_PEM_TRUSTSTORE
