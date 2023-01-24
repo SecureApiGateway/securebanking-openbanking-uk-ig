@@ -15,6 +15,7 @@ data:
   RCS_UI_FQDN: rcs-ui.dev.forgerock.financial
   AM_REALM: alpha
   USER_OBJECT: user
+  CERT_ISSUER: null-issuer
   IG_CLIENT_ID: ig-client
   IG_CLIENT_SECRET: password
   IG_IDM_USER: service_account.ig
@@ -23,7 +24,6 @@ data:
   IG_AGENT_PASSWORD: password
   IG_RCS_SECRET: password
   IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
-  IG_CERT_ISSUER: null-issuer
   IG_ASPSP_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
   IG_ASPSP_JWTSIGNER_ALIAS: jwtsigner
   IG_ASPSP_JWTSIGNER_KID: NTOZs+cHZSyO0p0AKPuHctl2ddc=
