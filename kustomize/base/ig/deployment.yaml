@@ -68,7 +68,7 @@ spec:
           - name: ig-ob-signing-key
             mountPath: /var/ig/secrets/open-banking
             readOnly: true
-          - name: test-trusted-dir-keys
+          - name: test-trusted-dir-keystore
             mountPath: /var/ig/secrets/test-trusted-directory
             readOnly: true
         livenessProbe:
@@ -100,7 +100,7 @@ spec:
           secret:
             secretName: ig-ob-signing-key
             optional: false
-        - name: test-trusted-dir-keys
+        - name: test-trusted-dir-keystore
           secret:
-            secretName: test-trusted-dir-keys
+            secretName: test-trusted-dir-keystore
             optional: false
