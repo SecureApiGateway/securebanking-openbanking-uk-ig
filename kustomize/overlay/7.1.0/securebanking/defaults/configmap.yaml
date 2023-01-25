@@ -30,4 +30,6 @@ data:
   IG_TEST_DIRECTORY_CA_KEYSTORE_PATH: /secrets/test-trusted-directory/ca.p12
   IG_TEST_DIRECTORY_CA_KEYSTORE_TYPE: PKCS12
   IG_TEST_DIRECTORY_CA_KEYSTORE_ALIAS: ca
-  IG_TEST_DIRECTORY_SIGNING_KEY_PATH: /secrets/test-trusted-directory/test-trusted-directory-signing-key.p12
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_PATH: /secrets/test-trusted-directory/test-trusted-directory-signing-key.p12
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_TYPE: PKCS12
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_ALIAS: jwt-signer
