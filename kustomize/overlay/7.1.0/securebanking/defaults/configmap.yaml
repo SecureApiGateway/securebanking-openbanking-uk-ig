@@ -13,6 +13,8 @@ data:
   RS_FQDN: rs.dev.forgerock.financial
   RCS_FQDN: rcs.dev.forgerock.financial
   RCS_UI_FQDN: rcs-ui.dev.forgerock.financial
+  RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
+  RCS_CONSENT_RESPONSE_JWT_ISSUER: secure-open-banking-rcs
   AM_REALM: alpha
   USER_OBJECT: user
   CERT_ISSUER: null-issuer
