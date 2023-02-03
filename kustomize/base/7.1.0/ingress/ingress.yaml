@@ -45,6 +45,13 @@ spec:
         pathType: Exact
       - backend:
           service:
+            name: securebanking-ui-rcs-ui
+            port:
+              number: 8080
+        path: /rcs/
+        pathType: Prefix
+      - backend:
+          service:
             name: ig
             port:
               number: 8080
