@@ -7,5 +7,4 @@ data:
   IG_FQDN: obdemo.devops.forgerock.financial
   RS_FQDN: rs.devops.forgerock.financial
   RCS_FQDN: rcs.devops.forgerock.financial
-  RCS_UI_FQDN: rcs-ui.devops.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.devops.forgerock.financial
