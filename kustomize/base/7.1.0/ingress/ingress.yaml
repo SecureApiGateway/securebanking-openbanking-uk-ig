@@ -35,7 +35,14 @@ spec:
             port:
               number: 8080
         path: /rcs-api
-        pathType: Exact        
+        pathType: Exact
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 8080
+        path: /rcs/ui/
+        pathType: Prefix
       - backend:
           service:
             name: ig
