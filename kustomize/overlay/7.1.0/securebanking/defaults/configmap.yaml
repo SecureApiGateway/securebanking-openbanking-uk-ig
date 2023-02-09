@@ -11,7 +11,7 @@ data:
   # FIDC value: FIDC (Forgerock Identity Cloud) identity cloud platform
   ENVIRONMENT_TYPE: CDK
   RS_FQDN: rs.dev.forgerock.financial
-  RCS_FQDN: rcs.dev.forgerock.financial
+  RCS_API_INTERNAL_SVC: securebanking-openbanking-uk-rcs
   RCS_UI_INTERNAL_SVC: securebanking-ui-rcs-ui
   RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
   RCS_CONSENT_RESPONSE_JWT_ISSUER: secure-open-banking-rcs
