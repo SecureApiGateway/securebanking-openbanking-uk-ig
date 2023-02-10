@@ -7,7 +7,6 @@ data:
   BASE_FQDN: nightly.forgerock.financial
   IG_FQDN: obdemo.nightly.forgerock.financial
   RS_FQDN: rs.nightly.forgerock.financial
-  RCS_FQDN: rcs.nightly.forgerock.financial
   IDENTITY_PLATFORM_FQDN: openam-forgerock-securebankingaccelerato.forgeblocks.com
   USER_OBJECT: alpha_user
   IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: PasswordGrant
