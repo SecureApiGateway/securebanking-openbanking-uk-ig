@@ -10,7 +10,7 @@ data:
   # CDM value: CDM (Cloud Deployment Model)
   # FIDC value: FIDC (Forgerock Identity Cloud) identity cloud platform
   ENVIRONMENT_TYPE: CDK
-  RS_FQDN: rs.dev.forgerock.financial
+  RS_INTERNAL_SVC: securebanking-openbanking-uk-rs
   RCS_API_INTERNAL_SVC: securebanking-openbanking-uk-rcs
   RCS_UI_INTERNAL_SVC: securebanking-ui-rcs-ui
   RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
