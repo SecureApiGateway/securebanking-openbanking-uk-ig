@@ -5,5 +5,4 @@ metadata:
 data:
   BASE_FQDN: jorgesanchezperez.forgerock.financial
   IG_FQDN: obdemo.jorgesanchezperez.forgerock.financial
-  RS_FQDN: rs.jorgesanchezperez.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.jorgesanchezperez.forgerock.financial

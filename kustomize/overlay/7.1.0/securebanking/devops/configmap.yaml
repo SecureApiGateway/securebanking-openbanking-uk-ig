@@ -5,5 +5,4 @@ metadata:
 data:
   BASE_FQDN: devops.forgerock.financial
   IG_FQDN: obdemo.devops.forgerock.financial
-  RS_FQDN: rs.devops.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.devops.forgerock.financial

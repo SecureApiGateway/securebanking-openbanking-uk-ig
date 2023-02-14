@@ -5,5 +5,4 @@ metadata:
 data:
   BASE_FQDN: frlaura-jianu.forgerock.financial
   IG_FQDN: obdemo.frlaura-jianu.forgerock.financial
-  RS_FQDN: rs.frlaura-jianu.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.frlaura-jianu.forgerock.financial

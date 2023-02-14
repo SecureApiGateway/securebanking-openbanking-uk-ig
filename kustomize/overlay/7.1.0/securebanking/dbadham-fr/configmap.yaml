@@ -5,5 +5,4 @@ metadata:
 data:
   BASE_FQDN: dbadham-fr.forgerock.financial
   IG_FQDN: obdemo.dbadham-fr.forgerock.financial
-  RS_FQDN: rs.dbadham-fr.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.dbadham-fr.forgerock.financial
