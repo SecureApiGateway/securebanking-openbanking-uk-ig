@@ -19,6 +19,7 @@ data:
   AM_REALM: alpha
   USER_OBJECT: user
   CERT_ISSUER: null-issuer
+  IG_INTERNAL_SVC: ig
   IG_CLIENT_ID: ig-client
   IG_CLIENT_SECRET: password
   IG_IDM_USER: service_account.ig
