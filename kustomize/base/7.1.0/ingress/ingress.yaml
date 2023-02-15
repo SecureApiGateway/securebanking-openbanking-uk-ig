@@ -49,15 +49,7 @@ spec:
             port:
               number: 8080
         path: /rs
-        pathType: Exact        
-# Temporary - this will be internal
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /repo
-        pathType: Exact        
+        pathType: Exact
 # Temporary - this will be internal
       - backend:
           service:
