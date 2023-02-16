@@ -68,7 +68,7 @@ spec:
   tls:
   - hosts:
     - $(IG_FQDN)
-    secretName: sslcert
+    secretName: obwac
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
