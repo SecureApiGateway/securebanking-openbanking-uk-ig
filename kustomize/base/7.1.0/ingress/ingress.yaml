@@ -36,9 +36,10 @@ spec:
               number: 8080
         path: /rs
         pathType: Exact
-  - hosts:
-      - $(IG_FQDN)
-    secretName: obwac
+  tls:
+    - hosts:
+        - $(IG_FQDN)
+      secretName: obwac
 ---
 # When K8S is upgraded to >= 1.14 - change the apiVersion to:
 #apiVersion: networking.k8s.io/v1beta1
