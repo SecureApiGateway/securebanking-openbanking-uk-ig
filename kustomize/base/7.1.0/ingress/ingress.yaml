@@ -39,7 +39,7 @@ spec:
   tls:
     - hosts:
         - $(IG_FQDN)
-      secretName: obwac
+      secretName: sslcert
 ---
 # When K8S is upgraded to >= 1.14 - change the apiVersion to:
 #apiVersion: networking.k8s.io/v1beta1
