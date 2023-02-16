@@ -24,7 +24,7 @@ spec:
           service:
             name: ig
             port:
-              number: 81
+              number: 80
         path: /am
         pathType: Prefix
       - backend:
