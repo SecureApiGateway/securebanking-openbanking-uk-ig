@@ -28,14 +28,14 @@ spec:
             port:
               number: 8080
         path: /am
-        pathType: Exact
+        pathType: Prefix
       - backend:
           service:
             name: ig
             port:
               number: 8080
         path: /rs
-        pathType: Exact
+        pathType: Prefix
   tls:
     - hosts:
         - $(IG_FQDN)
@@ -71,7 +71,7 @@ spec:
                 port:
                   number: 8080
             path: /am/XUI
-            pathType: Exact
+            pathType: Prefix
           - backend:
               service:
                 name: ig
@@ -100,14 +100,14 @@ spec:
                 port:
                   number: 8080
             path: /jwkms
-            pathType: Exact
+            pathType: Prefix
           - backend:
               service:
                 name: ig
                 port:
                   number: 8080
             path: /jwksproxy
-            pathType: Exact
+            pathType: Prefix
   tls:
     - hosts:
         - $(IG_FQDN)
