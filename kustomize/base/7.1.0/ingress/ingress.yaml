@@ -67,5 +67,5 @@ spec:
         pathType: Exact        
   tls:
   - hosts:
-    - "*.forgerock.financial"
+    - "*.*.forgerock.financial"
     secretName: obwac
