@@ -24,14 +24,14 @@ spec:
           service:
             name: ig
             port:
-              number: 8080
+              number: 80
         path: /am
         pathType: Prefix
       - backend:
           service:
             name: ig
             port:
-              number: 8080
+              number: 80
         path: /rs
         pathType: Prefix
   tls:
@@ -65,21 +65,21 @@ spec:
               service:
                 name: ig
                 port:
-                  number: 8080
+                  number: 80
             path: /am/XUI
             pathType: Prefix
           - backend:
               service:
                 name: ig
                 port:
-                  number: 8080
+                  number: 80
             path: /rcs/api/
             pathType: Prefix
           - backend:
               service:
                 name: ig
                 port:
-                  number: 8080
+                  number: 80
             path: /rcs/ui/
             pathType: Prefix
           # Temporary - this will be internal
@@ -87,14 +87,14 @@ spec:
               service:
                 name: ig
                 port:
-                  number: 8080
+                  number: 80
             path: /jwkms
             pathType: Prefix
           - backend:
               service:
                 name: ig
                 port:
-                  number: 8080
+                  number: 80
             path: /jwksproxy
             pathType: Prefix
   tls:
