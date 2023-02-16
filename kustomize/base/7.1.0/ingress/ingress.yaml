@@ -1,5 +1,3 @@
-# When K8S is upgraded to >= 1.14 - change the apiVersion to:
-#apiVersion: networking.k8s.io/v1beta1
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -41,8 +39,6 @@ spec:
         - $(IG_FQDN)
       secretName: sslcert
 ---
-# When K8S is upgraded to >= 1.14 - change the apiVersion to:
-#apiVersion: networking.k8s.io/v1beta1
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -69,7 +65,7 @@ spec:
               service:
                 name: ig
                 port:
-                  number: 81
+                  number: 80
             path: /am/XUI
             pathType: Prefix
           - backend:
