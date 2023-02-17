@@ -1,5 +1,4 @@
-# When K8S is upgraded to >= 1.14 - change the apiVersion to:
-#apiVersion: networking.k8s.io/v1beta1
+# Ingress for access to ForgeRock services, protected by a non Open Banking cert e.g. Let's Encrypt
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -19,57 +18,94 @@ metadata:
   name: forgerock
 spec:
   rules:
-  - host: $(IG_FQDN)
-    http:
-      paths:
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /am
-        pathType: Exact
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /rcs/api/
-        pathType: Prefix
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /rcs/ui/
-        pathType: Prefix
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /rs
-        pathType: Exact
-# Temporary - this will be internal
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /jwkms
-        pathType: Exact        
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /jwksproxy
-        pathType: Exact        
+    - host: $(IG_FQDN)
+      http:
+        paths:
+          # Access to the AM XUI, this is used when the PSU (end user) logs in via the browser
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /am/XUI
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /rcs/api/
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /rcs/ui/
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /jwkms
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /jwksproxy
+            pathType: Prefix
   tls:
-  - hosts:
-    - $(IG_FQDN)
-    secretName: sslcert
+    - hosts:
+        - $(IG_FQDN)
+      secretName: sslcert
+
 ---
+# Ingress for access to Open Banking APIs, this is protected by an Open Banking Directory OBWac cert
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
+    nginx.ingress.kubernetes.io/auth-tls-secret: $(NAMESPACE)/obri-ca
+    nginx.ingress.kubernetes.io/auth-tls-verify-client: optional_no_ca
+    nginx.ingress.kubernetes.io/http2-max-field-size: 16k
+    nginx.ingress.kubernetes.io/http2-max-header-size: 128k
+    nginx.ingress.kubernetes.io/proxy-body-size: 64m
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
+    nginx.ingress.kubernetes.io/proxy-buffering: "on"
+    nginx.ingress.kubernetes.io/proxy-buffers: 4 256k
+    nginx.ingress.kubernetes.io/proxy-busy-buffers_size: 256k
+    nginx.ingress.kubernetes.io/error-log-level: "debug"
+  name: open-banking
+spec:
+  rules:
+    - host: $(IG_FQDN)
+      http:
+        paths:
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /am
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /rs
+            pathType: Prefix
+  tls:
+    - hosts:
+        - $(IG_FQDN)
+      secretName: sslcert # TODO Use an Open Banking OBWac
+---
+# Access to the IG Studio UI, this should only be available in Development environments
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -81,17 +117,17 @@ metadata:
 
 spec:
   tls:
-  - hosts:
-    - $(IG_FQDN)
-    secretName: sslcert
+    - hosts:
+        - $(IG_FQDN)
+      secretName: sslcert
   rules:
-  - host: $(IG_FQDN)
-    http:
-      paths:
-      - backend:
-          service:
-            name: ig
-            port:
-              number: 8080
-        path: /ig(/|$)(.*)
-        pathType: Exact
+    - host: $(IG_FQDN)
+      http:
+        paths:
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 8080
+            path: /ig(/|$)(.*)
+            pathType: Exact
