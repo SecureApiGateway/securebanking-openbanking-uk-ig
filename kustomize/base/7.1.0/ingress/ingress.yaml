@@ -128,6 +128,6 @@ spec:
               service:
                 name: ig
                 port:
-                  number: 8080
+                  number: 80
             path: /ig(/|$)(.*)
             pathType: Exact
