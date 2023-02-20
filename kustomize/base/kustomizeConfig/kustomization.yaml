@@ -36,9 +36,9 @@ vars:
     apiVersion: v1
     kind: ConfigMap
     name: securebanking-platform-config
-- name: MATLS_FQDN
+- name: MTLS_FQDN
   fieldref:
-    fieldpath: data.MATLS_FQDN
+    fieldpath: data.MTLS_FQDN
   objref:
     apiVersion: v1
     kind: ConfigMap
