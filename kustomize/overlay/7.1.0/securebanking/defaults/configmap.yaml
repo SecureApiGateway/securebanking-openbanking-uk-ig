@@ -10,7 +10,6 @@ data:
   # CDM value: CDM (Cloud Deployment Model)
   # FIDC value: FIDC (Forgerock Identity Cloud) identity cloud platform
   ENVIRONMENT_TYPE: CDK
-  RS_FQDN: localhost # temp fudge to get environment working, until swagger is fixed to not need this value
   RS_INTERNAL_SVC: securebanking-openbanking-uk-rs
   RCS_API_INTERNAL_SVC: securebanking-openbanking-uk-rcs
   RCS_UI_INTERNAL_SVC: securebanking-ui-rcs-ui
