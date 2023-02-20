@@ -4,7 +4,9 @@ metadata:
   name: securebanking-platform-config
 data:
   BASE_FQDN: dev.forgerock.financial
-  IG_FQDN: obdemo.dev.forgerock.financial
+  SAPIG_FQDN: sapig.dev.forgerock.financial
+  MTLS_FQDN : mtls.sapig.dev.forgerock.financial
+  IG_FQDN: sapig.dev.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.dev.forgerock.financial
   # CDK value: (Cloud Developer's Kit) development identity platform
   # CDM value: CDM (Cloud Deployment Model)

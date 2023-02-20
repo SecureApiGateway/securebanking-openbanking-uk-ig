@@ -18,7 +18,7 @@ metadata:
   name: mtls
 spec:
   rules:
-    - host: $(IG_FQDN)
+    - host: $(MTLS_FQDN)
       http:
         paths:
           - backend:
@@ -44,7 +44,7 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - $(IG_FQDN) # TODO use mtls. domain
+        - $(MTLS_FQDN)
       secretName: sslcert # TODO Use OBWac
 ---
 # Ingress for access to routes protected with TLS by a ForgeRock cert
@@ -64,7 +64,7 @@ metadata:
   name: forgerock
 spec:
   rules:
-    - host: $(IG_FQDN)
+    - host: $(SAPIG_FQDN)
       http:
         paths:
           - backend:
@@ -104,7 +104,7 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - $(IG_FQDN)
+        - $(SAPIG_FQDN)
       secretName: sslcert
 ---
 # Ingress for dev only, provides access to the IG Studio UI
