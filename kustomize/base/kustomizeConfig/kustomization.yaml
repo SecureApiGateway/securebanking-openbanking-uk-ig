@@ -29,6 +29,20 @@ vars:
     apiVersion: v1
     kind: ConfigMap
     name: securebanking-platform-config
+- name: SAPIG_FQDN
+  fieldref:
+    fieldpath: data.SAPIG_FQDN
+  objref:
+    apiVersion: v1
+    kind: ConfigMap
+    name: securebanking-platform-config
+- name: MATLS_FQDN
+  fieldref:
+    fieldpath: data.MATLS_FQDN
+  objref:
+    apiVersion: v1
+    kind: ConfigMap
+    name: securebanking-platform-config
 - name: IDENTITY_PLATFORM_FQDN
   fieldref:
     fieldpath: data.IDENTITY_PLATFORM_FQDN
