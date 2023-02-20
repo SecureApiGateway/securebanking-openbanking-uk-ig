@@ -4,5 +4,7 @@ metadata:
   name: securebanking-platform-config
 data:
   BASE_FQDN: dbadham-fr.forgerock.financial
-  IG_FQDN: obdemo.dbadham-fr.forgerock.financial
+  SAPIG_FQDN: sapig.dbadham-fr.forgerock.financial
+  MTLS_FQDN: mtls.sapig.dbadham-fr.forgerock.financial
+  IG_FQDN: sapig.dbadham-fr.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.dbadham-fr.forgerock.financial
