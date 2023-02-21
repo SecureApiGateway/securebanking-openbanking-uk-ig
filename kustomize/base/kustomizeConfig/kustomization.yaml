@@ -43,6 +43,13 @@ vars:
     apiVersion: v1
     kind: ConfigMap
     name: securebanking-platform-config
+- name: AM_REALM
+  fieldref:
+    fieldpath: data.AM_REALM
+  objref:
+    apiVersion: v1
+    kind: ConfigMap
+    name: securebanking-platform-config
 - name: IDENTITY_PLATFORM_FQDN
   fieldref:
     fieldpath: data.IDENTITY_PLATFORM_FQDN
