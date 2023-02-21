@@ -64,7 +64,7 @@ metadata:
   name: forgerock
 spec:
   rules:
-    - host: $(SAPIG_FQDN)
+    - host: $(IG_FQDN)
       http:
         paths:
           - backend:
@@ -104,7 +104,7 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - $(SAPIG_FQDN)
+        - $(IG_FQDN)
       secretName: sslcert
 ---
 # Ingress for dev only, provides access to the IG Studio UI
