@@ -40,7 +40,7 @@ spec:
                 name: ig
                 port:
                   number: 80
-            path: /am/oauth2/realms/root/realms/alpha/well-known/openid-configuration
+            path: /am/oauth2/realms/root/realms/alpha/.well-known/openid-configuration
             pathType: Exact
           - backend:
               service:
