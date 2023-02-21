@@ -26,14 +26,14 @@ spec:
                 name: ig
                 port:
                   number: 80
-            path: /am/oauth2/realms/root/realms/$(AM_REALM)/access_token
+            path: /am/oauth2/realms/root/realms/alpha/access_token
             pathType: Exact
           - backend:
               service:
                 name: ig
                 port:
                   number: 80
-            path: /am/oauth2/realms/root/realms/$(AM_REALM)/register
+            path: /am/oauth2/realms/root/realms/alpha/register
             pathType: Exact
           - backend:
               service:
