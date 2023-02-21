@@ -45,7 +45,7 @@ spec:
   tls:
     - hosts:
         - $(MTLS_FQDN)
-      secretName: sslcert # TODO Use OBWac
+      secretName: obwac
 ---
 # Ingress for access to routes protected with TLS by a ForgeRock cert
 apiVersion: networking.k8s.io/v1
