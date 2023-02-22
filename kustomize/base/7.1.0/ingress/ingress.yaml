@@ -128,7 +128,7 @@ spec:
                 name: ig
                 port:
                   number: 80
-            path: /jwkms
+            path: /jwkms/
             pathType: Prefix
   tls:
     - hosts:
