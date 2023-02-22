@@ -100,6 +100,13 @@ spec:
                 name: ig
                 port:
                   number: 80
+            path: /jwkms/testdirectory/jwks
+            pathType: Exact
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
             path: /jwksproxy
             pathType: Prefix
   tls:
