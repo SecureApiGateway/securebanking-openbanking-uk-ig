@@ -34,7 +34,7 @@ spec:
                 port:
                   number: 80
             path: /am/oauth2/realms/root/realms/alpha/register
-            pathType: Exact
+            pathType: Prefix
           - backend:
               service:
                 name: ig
