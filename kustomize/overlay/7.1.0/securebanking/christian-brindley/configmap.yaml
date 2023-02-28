@@ -4,6 +4,6 @@ metadata:
   name: securebanking-platform-config
 data:
   BASE_FQDN: christian-brindley.forgerock.financial
-  IG_FQDN: obdemo.christian-brindley.forgerock.financial
-  RS_FQDN: rs.christian-brindley.forgerock.financial
+  IG_FQDN: sapig.christian-brindley.forgerock.financial
+  MTLS_FQDN: mtls.sapig.christian-brindley.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.christian-brindley.forgerock.financial

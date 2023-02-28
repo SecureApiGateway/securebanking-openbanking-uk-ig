@@ -4,6 +4,6 @@ metadata:
   name: securebanking-platform-config
 data:
   BASE_FQDN: bohocode.forgerock.financial
-  IG_FQDN: obdemo.bohocode.forgerock.financial
-  RS_FQDN: rs.bohocode.forgerock.financial
+  IG_FQDN: sapig.bohocode.forgerock.financial
+  MTLS_FQDN: mtls.sapig.bohocode.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.bohocode.forgerock.financial

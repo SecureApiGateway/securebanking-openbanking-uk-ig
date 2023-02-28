@@ -4,6 +4,6 @@ metadata:
   name: securebanking-platform-config
 data:
   BASE_FQDN: mariantiris.forgerock.financial
-  IG_FQDN: obdemo.mariantiris.forgerock.financial
-  RS_FQDN: rs.mariantiris.forgerock.financial
+  IG_FQDN: sapig.mariantiris.forgerock.financial
+  MTLS_FQDN: mtls.sapig.mariantiris.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.mariantiris.forgerock.financial
