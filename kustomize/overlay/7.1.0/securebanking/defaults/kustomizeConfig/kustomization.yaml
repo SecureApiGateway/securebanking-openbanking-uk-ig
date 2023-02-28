@@ -22,7 +22,7 @@ generatorOptions:
 
 # The variables defined below can be referenced in resources using the syntax $(VARIABLE)
 vars:
-- name: IG_FQDN
+- name: FQDN
   fieldref:
     fieldpath: data.IG_FQDN
   objref:
