@@ -4,13 +4,11 @@ commonLabels:
 resources:
 - securebanking
 - kustomizeConfig
-- ingress-new.yaml
+- ingress.yaml
 
 patchesStrategicMerge:
   - configmap.yaml
   - deployment.yaml
-  - ingress-delete.yaml
-  - ingress-replace.yaml
   - secret.yaml
 
 images:
