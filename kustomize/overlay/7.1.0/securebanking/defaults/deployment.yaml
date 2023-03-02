@@ -3,15 +3,7 @@ kind: Deployment
 metadata:
   name: ig
 spec:
-  selector:
-    matchLabels:
-      app: ig
   template:
-    metadata:
-      annotations:
-        sidecar.istio.io/inject: "false"
-      labels:
-        app: ig
     spec:
       initContainers:
         # Copies certs from the ig-truststore-pem into the new-truststore volume
