@@ -3,16 +3,7 @@ kind: Deployment
 metadata:
   name: ig
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: ig
   template:
-    metadata:
-      annotations:
-        sidecar.istio.io/inject: "false"
-      labels:
-        app: ig
     spec:
       initContainers:
         # Copies certs from the ig-truststore-pem into the new-truststore volume
@@ -40,26 +31,11 @@ spec:
 
       containers:
       - name: ig
-        env:
-        # - name: OPENIG_BASE
-        #   value: /config
-        # - name: CATALINA_OPTS
-        #   value: -server
-        - name: NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        - name: MY_POD_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.podIP
         envFrom:
         - secretRef:
             name: openig-secrets-env
         - configMapRef:
             name: securebanking-platform-config
-        #image: gcr.io/forgerock-io/ig/docker-build:7.0.0-af5592b
-        image: ig
         imagePullPolicy: Always
         volumeMounts:
           - name: new-truststore
@@ -71,23 +47,6 @@ spec:
           - name: test-trusted-dir-keystore
             mountPath: /var/ig/secrets/test-trusted-directory
             readOnly: true
-        livenessProbe:
-          httpGet:
-            path: /kube/liveness
-            port: 8080
-          periodSeconds: 30
-          timeoutSeconds: 5
-        readinessProbe:
-          httpGet:
-            path: /kube/readiness
-            port: 8080
-          initialDelaySeconds: 5
-        ports:
-        - containerPort: 8080   
-        resources:
-          requests:
-            cpu: 200m
-            memory: 512Mi
       volumes:
         # Empty volume where the igtruststore will be created by the initContainer, it can then be mounted into the ig container
         - name: new-truststore
