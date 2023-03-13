@@ -12,6 +12,10 @@ data:
   # FIDC value: FIDC (Forgerock Identity Cloud) identity cloud platform
   ENVIRONMENT_TYPE: CDK
   RS_INTERNAL_SVC: securebanking-openbanking-uk-rs
+  # RCS connection settings for the RS API
+  RS_API_URI: http://securebanking-openbanking-uk-rs:8080
+  # RCS connection settings for the Consent Repo (hosted by IG)
+  RCS_CONSENT_REPO_URI: http://ig:80
   RCS_API_INTERNAL_SVC: securebanking-openbanking-uk-rcs
   RCS_UI_INTERNAL_SVC: securebanking-ui-rcs-ui
   RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
