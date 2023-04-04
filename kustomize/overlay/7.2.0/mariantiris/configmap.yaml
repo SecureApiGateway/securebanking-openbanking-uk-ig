@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: securebanking-platform-config
+  name: deployment-config
 data:
   BASE_FQDN: mariantiris.forgerock.financial
   IG_FQDN: sapig.mariantiris.forgerock.financial

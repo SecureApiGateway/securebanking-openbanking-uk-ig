@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ig
+  name: secure-api-gateway
 spec:
   template:
     spec:
@@ -30,12 +30,12 @@ spec:
               value: "/var/run/secrets/truststore/ig-truststore.pem"
 
       containers:
-      - name: ig
+      - name: secure-api-gateway
         envFrom:
         - secretRef:
             name: openig-secrets-env
         - configMapRef:
-            name: securebanking-platform-config
+            name: deployment-config
         imagePullPolicy: Always
         volumeMounts:
           - name: new-truststore

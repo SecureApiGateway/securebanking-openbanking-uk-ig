@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: securebanking-platform-config
+  name: deployment-config
 data:
   BASE_FQDN: dev.forgerock.financial
   IG_FQDN: sapig.dev.forgerock.financial
@@ -11,13 +11,13 @@ data:
   # CDM value: CDM (Cloud Deployment Model)
   # FIDC value: FIDC (Forgerock Identity Cloud) identity cloud platform
   ENVIRONMENT_TYPE: CDK
-  RS_INTERNAL_SVC: securebanking-openbanking-uk-rs
+  RS_INTERNAL_SVC: test-facility-bank
   # RCS connection settings for the RS API
-  RS_API_URI: http://securebanking-openbanking-uk-rs:8080
+  RS_API_URI: http://test-facility-bank:8080
   # Connection settings for the Consent Repo (hosted by IG)
-  CONSENT_REPO_URI: http://ig:80
-  RCS_API_INTERNAL_SVC: securebanking-openbanking-uk-rcs
-  RCS_UI_INTERNAL_SVC: securebanking-ui-rcs-ui
+  CONSENT_REPO_URI: http://secure-api-gateway:80
+  RCS_API_INTERNAL_SVC: remote-consent-service
+  RCS_UI_INTERNAL_SVC: remote-consent-service-user-interface
   RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
   RCS_CONSENT_RESPONSE_JWT_ISSUER: secure-open-banking-rcs
   AM_REALM: alpha
