@@ -2,13 +2,13 @@ namespace: dev
 commonLabels:
   app.kubernetes.io/name: "forgerock"
 resources:
-- deployment.yaml
 - securebanking
 - kustomizeConfig
 - ingress.yaml
 
 patchesStrategicMerge:
   - configmap.yaml
+  - deployment.yaml
   - secret.yaml
 
 images:
