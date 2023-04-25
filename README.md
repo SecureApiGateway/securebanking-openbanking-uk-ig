@@ -1,7 +1,10 @@
+This repository holds Kustomise artifacts for deploying the ForgeRock platform into developer environments. It holds no value for customers trying to use the Secure API Gateway and is solely related to the core devs developer workflow.
+
+It also holds a set `cs_config_manager` config for the nightly env.
+
 # Kustomize
 
-This folder provides [Kustomize](https://kubectl.docs.kubernetes.io/pages/app_customization/introduction.html) artifacts
-for deploying the ForgeRock platform.
+This folder provides [Kustomize](https://kubectl.docs.kubernetes.io/pages/app_customization/introduction.html) artifacts for deploying the ForgeRock platform.
 
 If you are not familiar with Kustomize, please read the document link above - the explanation below will make a lot more sense.
 

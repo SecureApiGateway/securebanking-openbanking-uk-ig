@@ -1,0 +1,65 @@
+{
+  "_id": "secure-open-banking-rcs",
+  "_rev": "1441260424",
+  "_type": {
+    "_id": "RemoteConsentAgent",
+    "collection": true,
+    "name": "OAuth2 Remote Consent Service"
+  },
+  "jwkSet": {
+    "inherited": false,
+    "value": "&{esv.rcs.jwks}"
+  },
+  "jwkStoreCacheMissCacheTime": {
+    "inherited": false,
+    "value": 0
+  },
+  "jwksCacheTimeout": {
+    "inherited": false,
+    "value": 0
+  },
+  "jwksUri": {
+    "inherited": false
+  },
+  "publicKeyLocation": {
+    "inherited": false,
+    "value": "jwks"
+  },
+  "remoteConsentRedirectUrl": {
+    "inherited": false,
+    "value": "&{esv.baseurl}/rcs/ui/consent"
+  },
+  "remoteConsentRequestEncryptionAlgorithm": {
+    "inherited": false,
+    "value": "RSA-OAEP-256"
+  },
+  "remoteConsentRequestEncryptionEnabled": {
+    "inherited": false,
+    "value": false
+  },
+  "remoteConsentRequestEncryptionMethod": {
+    "inherited": false,
+    "value": "A128GCM"
+  },
+  "remoteConsentRequestSigningAlgorithm": {
+    "inherited": false,
+    "value": "RS256"
+  },
+  "remoteConsentResponseEncryptionAlgorithm": {
+    "inherited": false,
+    "value": "RSA-OAEP-256"
+  },
+  "remoteConsentResponseEncryptionMethod": {
+    "inherited": false,
+    "value": "A128GCM"
+  },
+  "remoteConsentResponseSigningAlg": {
+    "inherited": false,
+    "value": "PS256"
+  },
+  "requestTimeLimit": {
+    "inherited": false,
+    "value": 900
+  },
+  "userpassword": null
+}
