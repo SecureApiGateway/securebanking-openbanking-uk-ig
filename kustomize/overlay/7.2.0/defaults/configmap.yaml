@@ -16,6 +16,7 @@ data:
   RS_API_URI: http://test-facility-bank:8080
   # Connection settings for the Consent Repo (hosted by IG)
   CONSENT_REPO_URI: http://ig:80
+  RCS_CONSENT_STORE_URI: http://remote-consent-service:8080/consent/store
   RCS_API_INTERNAL_SVC: remote-consent-service
   RCS_UI_INTERNAL_SVC: remote-consent-service-user-interface
   RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
