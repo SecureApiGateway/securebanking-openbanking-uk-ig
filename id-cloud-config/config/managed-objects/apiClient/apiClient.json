@@ -16,9 +16,7 @@
       "jwksUri",
       "ssa",
       "apiClientOrg",
-      "oauth2ClientId",
-      "domesticPaymentIntents",
-      "accountAccessIntents"
+      "oauth2ClientId"
     ],
     "properties": {
       "_id": {
@@ -29,49 +27,6 @@
         "title": "IDM Internal ID",
         "type": "string",
         "userEditable": true,
-        "viewable": true
-      },
-      "accountAccessIntents": {
-        "description": "",
-        "items": {
-          "properties": {
-            "_ref": {
-              "type": "string"
-            },
-            "_refProperties": {
-              "properties": {
-                "_id": {
-                  "propName": "_id",
-                  "required": false,
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            }
-          },
-          "resourceCollection": [
-            {
-              "label": "Accountaccessintent",
-              "notify": false,
-              "path": "managed/accountAccessIntent",
-              "query": {
-                "fields": [],
-                "queryFilter": "true",
-                "sortKeys": []
-              }
-            }
-          ],
-          "reversePropertyName": "apiClient",
-          "reverseRelationship": true,
-          "type": "relationship",
-          "validate": false
-        },
-        "notifySelf": false,
-        "returnByDefault": false,
-        "searchable": false,
-        "title": "Accountaccessintents",
-        "type": "array",
-        "userEditable": false,
         "viewable": true
       },
       "apiClientOrg": {
@@ -137,49 +92,6 @@
         "title": "Description",
         "type": "string",
         "userEditable": true,
-        "viewable": true
-      },
-      "domesticPaymentIntents": {
-        "description": "",
-        "items": {
-          "properties": {
-            "_ref": {
-              "type": "string"
-            },
-            "_refProperties": {
-              "properties": {
-                "_id": {
-                  "propName": "_id",
-                  "required": false,
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            }
-          },
-          "resourceCollection": [
-            {
-              "label": "Domesticpaymentintent",
-              "notify": false,
-              "path": "managed/domesticPaymentIntent",
-              "query": {
-                "fields": [],
-                "queryFilter": "true",
-                "sortKeys": []
-              }
-            }
-          ],
-          "reversePropertyName": "apiClient",
-          "reverseRelationship": true,
-          "type": "relationship",
-          "validate": false
-        },
-        "notifySelf": false,
-        "returnByDefault": false,
-        "searchable": false,
-        "title": "Domesticpaymentintents",
-        "type": "array",
-        "userEditable": false,
         "viewable": true
       },
       "id": {
