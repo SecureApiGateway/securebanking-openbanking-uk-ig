@@ -40,9 +40,9 @@ jobs:
       - name: 'Build Environment'
         uses: codefresh-io/codefresh-pipeline-runner@master
         with:
-          args: '-v SERVICE_NAME=${{ env.SERVICE_NAME }} -v ENVIRONMENT=${{ env.GITHUB_USER }}'
+          args: '-v BRANCH=${{ steps.branch-name.outputs.current_branch }} -v SERVICE_NAME=${{ env.SERVICE_NAME }} -v ENVIRONMENT=${{ env.GITHUB_USER }}'
         env:
           PIPELINE_NAME: 'ForgeCloud/sbat-infra/service-build'
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          TRIGGER_NAME: github-actions-trigger-gateway
+          TRIGGER_NAME: github-actions-trigger-devenvs
         id: run-pipeline
