@@ -13,7 +13,7 @@ patchesStrategicMerge:
 
 images:
 - name: ig
-  newName: eu.gcr.io/sbat-gcr-develop/securebanking/gate/ig
+  newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/gate/ig
   newTag: latest
 
 
