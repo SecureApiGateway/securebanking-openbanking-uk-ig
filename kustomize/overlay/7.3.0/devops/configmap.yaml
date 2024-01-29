@@ -7,3 +7,4 @@ data:
   IG_FQDN: sapig.devops.forgerock.financial
   MTLS_FQDN: mtls.sapig.devops.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.devops.forgerock.financial
+  OB_ASPSP_SOFTWARE_ID: gYcVCmFmzItBTxM4Y1cPn2
