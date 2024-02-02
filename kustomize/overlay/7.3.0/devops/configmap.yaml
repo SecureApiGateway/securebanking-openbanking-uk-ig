@@ -8,4 +8,3 @@ data:
   MTLS_FQDN: mtls.sapig.devops.forgerock.financial
   IDENTITY_PLATFORM_FQDN: iam.devops.forgerock.financial
   OB_ASPSP_SOFTWARE_ID: gYcVCmFmzItBTxM4Y1cPn2
-  IG_OB_ASPSP_SIGNING_KID: KT85P5YZolPsbGVmHIOCm-KgRT0
