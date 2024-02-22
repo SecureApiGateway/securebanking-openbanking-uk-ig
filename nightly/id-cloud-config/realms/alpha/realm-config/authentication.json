@@ -17,7 +17,7 @@
   },
   "core": {
     "adminAuthModule": "[Empty]",
-    "orgConfig": "PasswordGrant"
+    "orgConfig": "Login"
   },
   "general": {
     "defaultAuthLevel": 0,
