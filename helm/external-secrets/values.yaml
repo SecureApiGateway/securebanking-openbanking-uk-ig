@@ -6,7 +6,7 @@ environment:
   # Configuration relating to the FR Platform
   fr_platform:
     type: FIDC
-    fqdn: openam-forgerock-securebankingaccelerato.forgeblocks.com
+    fqdn: openam-sapig-nightly.forgeblocks.com
   # Configuration relation to the SBAT deployment
   sbat: 
     # The GCP project in which the SBAT is deployed

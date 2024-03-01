@@ -7,7 +7,7 @@ data:
   BASE_FQDN: nightly.forgerock.financial
   IG_FQDN: sapig.nightly.forgerock.financial
   MTLS_FQDN: mtls.sapig.nightly.forgerock.financial
-  IDENTITY_PLATFORM_FQDN: openam-forgerock-securebankingaccelerato.forgeblocks.com
+  IDENTITY_PLATFORM_FQDN: openam-sapig-nightly.forgeblocks.com
   USER_OBJECT: alpha_user
   IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: PasswordGrant
   IDENTITY_GOOGLE_SECRET_STORE_NAME: ESV
