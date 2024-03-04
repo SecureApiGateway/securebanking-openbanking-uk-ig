@@ -10,3 +10,6 @@ patchesJson6902:
       kind: Secret
       name: openig-secrets-env
       version: v1
+
+patchesStrategicMerge:
+  - configmap.yaml
