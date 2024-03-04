@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: deployment-config
 data:
-  BASE_FQDN: dbadham-fr.forgerock.financial
-  IG_FQDN: sapig.dbadham-fr.forgerock.financial
-  MTLS_FQDN: mtls.sapig.dbadham-fr.forgerock.financial
-  IDENTITY_PLATFORM_FQDN: iam.dbadham-fr.forgerock.financial
+  BASE_FQDN: dbadham-fr-ob.forgerock.financial
+  IG_FQDN: sapig.dbadham-fr-ob.forgerock.financial
+  MTLS_FQDN: mtls.sapig.dbadham-fr-ob.forgerock.financial
+  IDENTITY_PLATFORM_FQDN: iam.dbadham-fr-ob.forgerock.financial

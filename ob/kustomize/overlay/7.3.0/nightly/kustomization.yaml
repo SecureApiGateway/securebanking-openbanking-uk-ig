@@ -1,4 +1,4 @@
-namespace: nightly
+namespace: nightly-ob
 commonLabels:
   app.kubernetes.io/name: "forgerock"
 resources:
