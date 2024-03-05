@@ -1,0 +1,19 @@
+namespace: dev
+commonLabels:
+  app.kubernetes.io/name: "forgerock"
+resources:
+- securebanking
+- kustomizeConfig
+- ingress.yaml
+
+patchesStrategicMerge:
+  - configmap.yaml
+  - deployment.yaml
+  - secret.yaml
+
+images:
+- name: core
+  newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
+  newTag: latest
+
+
