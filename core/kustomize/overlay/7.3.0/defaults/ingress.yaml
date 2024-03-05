@@ -34,7 +34,13 @@ spec:
                   number: 80
             path: /am/oauth2/realms/root/realms/alpha/register
             pathType: Prefix
-
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /rs/
+            pathType: Prefix
   tls:
     - hosts:
         - $(MTLS_FQDN)
@@ -65,6 +71,20 @@ spec:
                 port:
                   number: 80
             path: /am/
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /rcs/api/
+            pathType: Prefix
+          - backend:
+              service:
+                name: ig
+                port:
+                  number: 80
+            path: /rcs/ui/
             pathType: Prefix
           - backend:
               service:
@@ -112,3 +132,28 @@ spec:
         - $(FQDN)
       secretName: sslcert
 ---
+# Ingress for dev only, provides access to the IG Studio UI
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ig-web
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: "/$2"
+spec:
+  tls:
+  - hosts:
+    - $(FQDN)
+    secretName: sslcert
+  rules:
+  - host: $(FQDN)
+    http:
+      paths:
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /ig(/|$)(.*)
+        pathType: Exact
