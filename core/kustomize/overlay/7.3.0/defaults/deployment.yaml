@@ -30,7 +30,7 @@ spec:
               value: "/var/run/secrets/truststore/ig-truststore.pem"
 
       containers:
-      - name: core
+      - name: ig
         envFrom:
         - secretRef:
             name: openig-secrets-env
