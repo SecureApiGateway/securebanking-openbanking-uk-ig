@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: deployment-config
-data:
-  BASE_FQDN: bohocode.forgerock.financial
-  IG_FQDN: sapig.bohocode.forgerock.financial
-  MTLS_FQDN: mtls.sapig.bohocode.forgerock.financial
-  IDENTITY_PLATFORM_FQDN: iam.bohocode.forgerock.financial

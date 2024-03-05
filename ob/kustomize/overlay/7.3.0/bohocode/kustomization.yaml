@@ -1,4 +1,4 @@
-namespace: dbadham-fr
+namespace: bohocode-ob
 commonLabels:
   app.kubernetes.io/name: "forgerock"
 resources:

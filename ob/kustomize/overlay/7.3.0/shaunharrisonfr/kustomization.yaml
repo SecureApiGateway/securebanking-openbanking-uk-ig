@@ -1,4 +1,4 @@
-namespace: bohocode
+namespace: shaunharrisonfr-ob
 commonLabels:
   app.kubernetes.io/name: "forgerock"
 resources:
