@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: deployment-config
+data:
+  BASE_FQDN: frlaura-jianu-ob.forgerock.financial
+  IG_FQDN: sapig.frlaura-jianu-ob.forgerock.financial
+  MTLS_FQDN: mtls.sapig.frlaura-jianu-ob.forgerock.financial
+  IDENTITY_PLATFORM_FQDN: iam.frlaura-jianu-ob.forgerock.financial
