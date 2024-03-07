@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: deployment-config
+data:
+  BASE_FQDN: dev-ob.forgerock.financial
+  IG_FQDN: sapig.dev-ob.forgerock.financial
+  MTLS_FQDN: mtls.sapig.dev-ob.forgerock.financial
+  IDENTITY_PLATFORM_FQDN: iam.dev-ob.forgerock.financial
