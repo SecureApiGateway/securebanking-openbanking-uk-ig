@@ -1,0 +1,28 @@
+{
+  "alpha": {
+    "IdentityGatewayAgent": [
+      {
+        "id": "ig-agent"
+      }
+    ],
+    "OAuth2Client": [
+      {
+        "id": "ig-client"
+      }
+    ],
+    "RemoteConsentAgent": [
+      {
+        "id": "secure-open-banking-rcs"
+      }
+    ],
+    "SoftwarePublisher": [
+      {
+        "id": "Open Banking Test Directory"
+      },
+      {
+        "id": "Secure API Gateway Development Trusted Directory"
+      }
+    ]
+  },
+  "bravo": {}
+}
