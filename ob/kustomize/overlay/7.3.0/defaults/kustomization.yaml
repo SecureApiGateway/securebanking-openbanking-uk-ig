@@ -12,5 +12,5 @@ patchesStrategicMerge:
   - configmap.yaml
 #  - deployment.yaml
   - secret.yaml
-  - ingress.yaml
+#  - ingress.yaml
 
