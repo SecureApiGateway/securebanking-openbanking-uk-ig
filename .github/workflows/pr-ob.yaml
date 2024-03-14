@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths: 
-    - 'ob/**'
+      - 'ob/**'
 
 env:
   PR_NUMBER: pr-${{ github.event.number }}
