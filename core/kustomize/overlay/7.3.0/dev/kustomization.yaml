@@ -4,12 +4,5 @@ commonLabels:
 resources:
 - ../defaults
 
-patchesJson6902:
-  - path: secrets-prometheus-patch.yaml
-    target:
-      kind: Secret
-      name: core-secrets
-      version: v1
-
 patchesStrategicMerge:
   - configmap.yaml
