@@ -45,5 +45,5 @@ jobs:
         env:
           PIPELINE_NAME: 'ForgeCloud/sbat-infra/dev-core-service-build'
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          TRIGGER_NAME: github-actions-trigger-devenvs
+          TRIGGER_NAME: github-actions-trigger-core
         id: run-pipeline
