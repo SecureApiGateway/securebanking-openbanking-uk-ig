@@ -10,7 +10,7 @@ secretGenerator:
 
 patchesStrategicMerge:
   - configmap.yaml
-  - deployment.yaml
+#  - deployment.yaml
   - secret.yaml
   - ingress.yaml
 
