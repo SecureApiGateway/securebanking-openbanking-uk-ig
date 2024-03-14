@@ -36,27 +36,6 @@ vars:
     apiVersion: v1
     kind: ConfigMap
     name: core-deployment-config
-- name: IDENTITY_PLATFORM_FQDN
-  fieldref:
-    fieldpath: data.IDENTITY_PLATFORM_FQDN
-  objref:
-    apiVersion: v1
-    kind: ConfigMap
-    name: core-deployment-config
-- name: INGRESS_IP
-  fieldref:
-    fieldpath: data.INGRESS_IP
-  objref:
-    apiVersion: v1
-    kind: ConfigMap
-    name: core-deployment-config
-- name: CERT_ISSUER
-  fieldref:
-    fieldpath: data.CERT_ISSUER
-  objref:
-    apiVersion: v1
-    kind: ConfigMap
-    name: core-deployment-config
 # TODO: Deprecate the use of $(NAMESPACE) in kustomize configurations
 - name: NAMESPACE
   objref:
