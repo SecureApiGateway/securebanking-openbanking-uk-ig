@@ -9,5 +9,6 @@ secretGenerator:
 - name: obri-ca
   files:
   - ca.crt
+- name: core-secrets
 generatorOptions:
   disableNameSuffixHash: true
