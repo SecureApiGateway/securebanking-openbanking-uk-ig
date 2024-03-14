@@ -23,7 +23,7 @@ spec:
             - name: TRUSTSTORE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: openig-secrets-env
+                  name: core-secrets
                   key: IG_TRUSTSTORE_PASSWORD
             # Path to the pem file containing the certs to copy into the new truststore
             - name: IG_PEM_TRUSTSTORE
@@ -33,9 +33,9 @@ spec:
       - name: ig
         envFrom:
         - secretRef:
-            name: openig-secrets-env
+            name: core-secrets
         - configMapRef:
-            name: deployment-config
+            name: core-deployment-config
         imagePullPolicy: Always
         volumeMounts:
           - name: new-truststore
