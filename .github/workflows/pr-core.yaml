@@ -6,8 +6,6 @@ on:
       - master
     paths: 
     - 'core/**'
-    paths-ignore:
-      - README.md
 
 env:
   PR_NUMBER: pr-${{ github.event.number }}
