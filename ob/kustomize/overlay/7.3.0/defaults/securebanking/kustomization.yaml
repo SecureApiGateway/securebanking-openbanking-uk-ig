@@ -3,7 +3,7 @@ commonLabels:
   app.kubernetes.io/name: "forgerock"
 resources:
 # May need a nicer way of doing the release verison in future
-- https://github.com/ForgeRock/forgeops/kustomize/base/ig?ref=release/7.3-20230706
+- https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=master
 
 secretGenerator:
 - name: obri-ca
