@@ -1,20 +1,24 @@
-name: pull-request
+name: Pull Request - Build and Deploy - OB
 
 on:
   pull_request:
     branches:
       - master
+    paths: 
+    - 'ob/**'
     paths-ignore:
       - README.md
 
 env:
   PR_NUMBER: pr-${{ github.event.number }}
   SERVICE_NAME: ig-devenv
+  SAPIG_TYPE: ob
+
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    name: Check PR integrity
+    name: Deploy
     steps:
       - uses: actions/checkout@v4
       
@@ -40,7 +44,7 @@ jobs:
       - name: 'Build Environment'
         uses: codefresh-io/codefresh-pipeline-runner@master
         with:
-          args: '-v BRANCH=${{ steps.branch-name.outputs.current_branch }} -v SERVICE_NAME=${{ env.SERVICE_NAME }} -v ENVIRONMENT=${{ env.GITHUB_USER }}-ob'
+          args: '-v BRANCH=${{ steps.branch-name.outputs.current_branch }} -v SERVICE_NAME=${{ env.SERVICE_NAME }} -v ENVIRONMENT=${{ env.GITHUB_USER }}-${{ env.SAPIG_TYPE }}'
         env:
           PIPELINE_NAME: 'ForgeCloud/sbat-infra/dev-ob-service-build'
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
