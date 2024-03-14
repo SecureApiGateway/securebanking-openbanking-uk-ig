@@ -1,6 +1,0 @@
-namespace: default
-commonLabels:
-  app.kubernetes.io/name: "forgerock"
-resources:
-# May need a nicer way of doing the release verison in future
-- https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=1315-strip-core-config
