@@ -12,7 +12,7 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-- https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=1315-strip-core-config
+- https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=master
 
 patchesStrategicMerge:
   - configmap.yaml
