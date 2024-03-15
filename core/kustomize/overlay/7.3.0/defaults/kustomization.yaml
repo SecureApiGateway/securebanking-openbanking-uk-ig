@@ -7,9 +7,9 @@ resources:
 - ingress.yaml
 
 patchesStrategicMerge:
+  - secret.yaml
   - configmap.yaml
   - deployment.yaml
-  - secret.yaml
 
 images:
 - name: ig

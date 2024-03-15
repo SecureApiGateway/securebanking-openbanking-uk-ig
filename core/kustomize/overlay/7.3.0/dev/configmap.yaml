@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: deployment-config
+  name: core-deployment-config
 data:
   BASE_FQDN: dev-core.forgerock.financial
   IG_FQDN: sapig.dev-core.forgerock.financial
