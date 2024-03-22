@@ -29,12 +29,6 @@ patches:
       group: networking.k8s.io
       version: v1
       kind: Ingress
-      name: mtls
-    path: patch/ingress/mtls-ingress-patch.yaml
-  - target:
-      group: networking.k8s.io
-      version: v1
-      kind: Ingress
       name: forgerock
     path: patch/ingress/forgerock-ingress-patch.yaml
   - target:
