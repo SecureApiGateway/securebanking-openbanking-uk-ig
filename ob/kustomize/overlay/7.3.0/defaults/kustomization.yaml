@@ -37,6 +37,11 @@ patches:
       kind: Deployment
       name: ig
     path: patch/deployment/ig-deployment-patch.yaml
+  - target:
+      version: v1
+      kind: ConfigMap
+      name: core-deployment-config
+    path: patch/configmap/core-configmap-patch.yaml
   - patch: |-
       $patch: delete
       apiVersion: v1
