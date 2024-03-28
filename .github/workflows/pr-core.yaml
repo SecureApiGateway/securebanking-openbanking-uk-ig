@@ -43,7 +43,7 @@ jobs:
         with:
           args: '-v NEWBRANCH=${{ steps.branch-name.outputs.current_branch }} -v SERVICE_NAME=${{ env.SERVICE_NAME }} -v ENVIRONMENT=${{ env.GITHUB_USER }}-${{ env.SAPIG_TYPE }}'
         env:
-          PIPELINE_NAME: 'ForgeCloud/sbat-infra/dev-core-service-build'
+          PIPELINE_NAME: 'SAPIG-devenv/dev-core-service-build'
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          TRIGGER_NAME: github-actions-trigger-core
+          TRIGGER_NAME: github-actions-trigger-devenvs
         id: run-pipeline
