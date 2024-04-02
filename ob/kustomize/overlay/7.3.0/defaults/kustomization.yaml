@@ -18,6 +18,11 @@ patchesStrategicMerge:
   - configmap.yaml
   - secret.yaml
 
+images:
+- name: ig
+  newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig
+  newTag: latest
+
 patches:
   - target:
       group: networking.k8s.io

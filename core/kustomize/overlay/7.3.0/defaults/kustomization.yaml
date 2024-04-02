@@ -10,3 +10,8 @@ patchesStrategicMerge:
   - secret.yaml
   - configmap.yaml
   - deployment.yaml
+
+images:
+- name: ig
+  newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
+  newTag: latest
