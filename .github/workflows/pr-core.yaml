@@ -46,4 +46,5 @@ jobs:
           PIPELINE_NAME: 'SAPIG-devenv/dev-core-service-build'
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           TRIGGER_NAME: github-actions-trigger-devenvs
+          CF_BRANCH: master
         id: run-pipeline
