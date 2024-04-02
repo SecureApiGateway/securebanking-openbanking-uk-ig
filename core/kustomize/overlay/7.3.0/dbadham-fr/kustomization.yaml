@@ -1,0 +1,13 @@
+namespace: dbadham-fr-core
+commonLabels:
+  app.kubernetes.io/name: "forgerock"
+resources:
+- ../defaults
+
+patchesStrategicMerge:
+  - configmap.yaml
+
+images:
+- name: ig
+  newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
+  newTag: dev
