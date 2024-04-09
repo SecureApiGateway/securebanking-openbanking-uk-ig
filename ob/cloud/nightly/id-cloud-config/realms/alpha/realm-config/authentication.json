@@ -41,6 +41,7 @@
     "usernameGeneratorEnabled": true
   },
   "security": {
+    "addClearSiteDataHeader": true,
     "keyAlias": "test",
     "moduleBasedAuthEnabled": false,
     "sharedSecret": {
