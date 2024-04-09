@@ -23,7 +23,7 @@
   },
   "jwksUri": {
     "inherited": false,
-    "value": "https://jwkms/jwksproxy/keystore.openbankingtest.org.uk/keystore/openbanking.jwks"
+    "value": "https://keystore.openbankingtest.org.uk/keystore/openbanking.jwks"
   },
   "publicKeyLocation": {
     "inherited": false,
