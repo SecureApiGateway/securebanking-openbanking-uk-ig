@@ -24,5 +24,24 @@
       }
     ]
   },
-  "bravo": {}
+  "bravo": {
+    "IdentityGatewayAgent": [
+      {
+        "id": "ig-agent"
+      }
+    ],
+    "OAuth2Client": [
+      {
+        "id": "ig-client"
+      }
+    ],
+    "SoftwarePublisher": [
+      {
+        "id": "Open Banking Test Directory"
+      },
+      {
+        "id": "Secure API Gateway Development Trusted Directory"
+      }
+    ]
+}
 }
