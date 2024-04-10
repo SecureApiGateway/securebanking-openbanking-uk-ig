@@ -41,9 +41,6 @@ spec:
           - name: new-truststore
             mountPath: /var/ig/secrets/truststore
             readOnly: true
-          - name: ig-ob-signing-key
-            mountPath: /var/ig/secrets/open-banking
-            readOnly: true
           - name: test-trusted-dir-keystore
             mountPath: /var/ig/secrets/test-trusted-directory
             readOnly: true
@@ -54,10 +51,6 @@ spec:
         - name: ig-truststore-pem
           secret:
             secretName: ig-truststore-pem
-            optional: false
-        - name: ig-ob-signing-key
-          secret:
-            secretName: ig-ob-signing-key
             optional: false
         - name: test-trusted-dir-keystore
           secret:
