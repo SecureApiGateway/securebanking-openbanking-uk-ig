@@ -11,5 +11,5 @@ patches:
   - target:
       version: v1
       kind: Ingress
-      name: cmtls
+      name: mtls
     path: patch/ingress/mtls-ingress-patch.yaml
