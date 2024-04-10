@@ -9,13 +9,13 @@
     secretRef:
       name: ob-secrets
 - op: add
-  path: "/spec/template/spec/containers/0/volumeMounts/2"
+  path: "/spec/template/spec/containers/0/volumeMounts/"
   value: 
     name: ig-ob-signing-key
     mountPath: /var/ig/secrets/open-banking
     readOnly: true
 - op: add
-  path: "/spec/template/spec/volumes/3"
+  path: "/spec/template/spec/volumes/"
   value: 
     name: ig-ob-signing-key
     secret:
