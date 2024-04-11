@@ -251,7 +251,7 @@
   "pluginsConfig": {
     "accessTokenEnricherClass": "org.forgerock.openam.oauth2.OpenAMScopeValidator",
     "accessTokenModificationPluginType": "SCRIPTED",
-    "accessTokenModificationScript": "39c08084-1238-43e8-857f-2e11005eac49",
+    "accessTokenModificationScript": "21138ab1-0621-4466-b18f-670bfcbabca7",
     "accessTokenModifierClass": "org.forgerock.openam.oauth2.OpenAMScopeValidator",
     "authorizeEndpointDataProviderClass": "org.forgerock.openam.oauth2.OpenAMScopeValidator",
     "authorizeEndpointDataProviderPluginType": "JAVA",
