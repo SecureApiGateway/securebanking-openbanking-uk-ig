@@ -2,7 +2,12 @@
   "alpha": {
     "IdentityGatewayAgent": [
       {
-        "id": "ig-agent"
+        "id": [
+          "ig-agent"
+        ],
+        "overrides": {
+          "userpassword": "${ESV_SAPIG_OB_IG_AGENT_PASSWORD_1}"
+        }
       }
     ],
     "OAuth2Client": [
