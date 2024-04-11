@@ -198,6 +198,10 @@
     "generateRegistrationAccessTokens": true,
     "requiredSoftwareStatementAttestedAttributes": []
   },
+  "consent": {
+    "clientsCanSkipConsent": false,
+    "enableRemoteConsent": false
+  },
   "coreOAuth2Config": {
     "accessTokenLifetime": 360000,
     "accessTokenMayActScript": "[Empty]",
