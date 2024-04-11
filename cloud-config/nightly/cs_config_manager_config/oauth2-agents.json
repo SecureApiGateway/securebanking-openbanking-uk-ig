@@ -12,12 +12,23 @@
     ],
     "OAuth2Client": [
       {
-        "id": "ig-client"
+        "id": [
+          "ig-client"
+        ],
+        "overrides": {
+          "userpassword": "${ESV_SAPIG_OB_IG_CLIENT_PASSWORD_1}"
+        }
       }
     ],
     "RemoteConsentAgent": [
       {
-        "id": "secure-open-banking-rcs"
+        "id": [
+          "secure-open-banking-rcs"
+        ],
+        "overrides": {
+          "jwkSet": "${ESV_SAPIG_OB_RCS_JWKS_1}",
+          "remoteConsentRedirectUrl": "${ESV_SAPIG_OB_BASEURL}"
+        }
       }
     ],
     "SoftwarePublisher": [
@@ -32,12 +43,22 @@
   "bravo": {
     "IdentityGatewayAgent": [
       {
-        "id": "ig-agent"
+        "id": [
+          "ig-agent"
+        ],
+        "overrides": {
+          "userpassword": "${ESV_SAPIG_CORE_IG_AGENT_PASSWORD_1}"
+        }
       }
     ],
     "OAuth2Client": [
       {
-        "id": "ig-client"
+        "id": [
+          "ig-client"
+        ],
+        "overrides": {
+          "userpassword": "${ESV_SAPIG_OB_IG_CLIENT_PASSWORD_1}"
+        }
       }
     ],
     "SoftwarePublisher": [
