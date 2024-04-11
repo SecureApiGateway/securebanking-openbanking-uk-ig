@@ -26,7 +26,7 @@
           "secure-open-banking-rcs"
         ],
         "overrides": {
-          "jwkSet": "${ESV_SAPIG_OB_RCS_JWKS_1}",
+          "jwkSet.value": "${ESV_SAPIG_OB_RCS_JWKS_1}",
           "remoteConsentRedirectUrl": "${ESV_SAPIG_OB_BASEURL}"
         }
       }
