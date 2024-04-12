@@ -343,38 +343,6 @@
       "methods": "action",
       "pattern": "notification",
       "roles": "internal/role/openidm-authorized"
-    },
-    {
-      "actions": "*",
-      "methods": "read",
-      "pattern": "info/ping",
-      "roles": "*"
-    },
-    {
-      "actions": "*",
-      "excludePatterns": "managed/svcacct,managed/svcacct/*,managed/teammember,managed/teammember/*",
-      "methods": "*",
-      "pattern": "*",
-      "roles": "internal/role/openidm-svcacct"
-    },
-    {
-      "actions": "*",
-      "methods": "read,query",
-      "pattern": "managed/teammember/*",
-      "roles": "internal/role/openidm-teammember-reader"
-    },
-    {
-      "actions": "*",
-      "methods": "*",
-      "pattern": "managed/alpha_application/*,managed/bravo_application/*",
-      "roles": "internal/role/openidm-application-promotion"
-    },
-    {
-      "actions": "",
-      "customAuthz": "isMyProfile()",
-      "methods": "read,query",
-      "pattern": "profile/*",
-      "roles": "*"
     }
   ]
 }

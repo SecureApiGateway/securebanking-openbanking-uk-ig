@@ -6,7 +6,7 @@
           "ig-agent"
         ],
         "overrides": {
-          "userpassword": "${ESV_SAPIG_OB_IG_AGENT_PASSWORD_1}"
+          "userpassword": "&{esv.sapig.ob.ig.agent.password}"
         }
       }
     ],
@@ -16,7 +16,9 @@
           "ig-client"
         ],
         "overrides": {
-          "userpassword": "${ESV_SAPIG_OB_IG_CLIENT_PASSWORD_1}"
+          "coreOAuth2ClientConfig": {
+            "userpassword": "&{esv.sapig.ob.ig.client.password}"
+          }
         }
       }
     ],
@@ -27,10 +29,10 @@
         ],
         "overrides": {
           "jwkSet": {
-              "value": "${ESV_SAPIG_OB_RCS_JWKS_1}"
+              "value": "&{esv.sapig.ob.rcs.jwks}"
             },
           "remoteConsentRedirectUrl": {
-              "value": "${ESV_SAPIG_OB_BASEURL}"
+              "value": "&{esv.sapig.ob.baseurl}/rcs/ui/consent"
             }
         }
       }
@@ -45,7 +47,7 @@
         ],
         "overrides": {
           "jwksUri": {
-            "value": "${ESV_SAPIG_OB_BASEURL}"
+            "value": "&{esv.sapig.ob.baseurl}/jwkms/testdirectory/jwks"
           }
         }
       }
@@ -58,7 +60,7 @@
           "ig-agent"
         ],
         "overrides": {
-          "userpassword": "${ESV_SAPIG_CORE_IG_AGENT_PASSWORD_1}"
+          "userpassword": "&{esv.sapig.ob.ig.agent.password}"
         }
       }
     ],
@@ -68,7 +70,9 @@
           "ig-client"
         ],
         "overrides": {
-          "userpassword": "${ESV_SAPIG_OB_IG_CLIENT_PASSWORD_1}"
+          "coreOAuth2ClientConfig": {
+            "userpassword": "&{esv.sapig.ob.ig.client.password}"
+          }
         }
       }
     ],
@@ -81,7 +85,9 @@
           "Secure API Gateway Development Trusted Directory"
         ],
         "overrides": {
-          "": "${}"
+          "jwksUri": {
+            "value": "&{esv.sapig.ob.baseurl}/jwkms/testdirectory/jwks"
+          }
         }
       }
     ]
