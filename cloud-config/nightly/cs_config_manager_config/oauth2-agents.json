@@ -29,11 +29,11 @@
         ],
         "overrides": {
           "jwkSet": {
-              "value": "&{esv.sapig.ob.rcs.jwks}"
-            },
+            "value": "&{esv.sapig.ob.rcs.jwks}"
+          },
           "remoteConsentRedirectUrl": {
-              "value": "&{esv.sapig.ob.baseurl}/rcs/ui/consent"
-            }
+            "value": "&{esv.sapig.ob.baseurl}/rcs/ui/consent"
+          }
         }
       }
     ],
