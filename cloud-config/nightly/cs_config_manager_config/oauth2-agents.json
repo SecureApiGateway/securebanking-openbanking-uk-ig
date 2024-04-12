@@ -60,7 +60,7 @@
           "ig-agent"
         ],
         "overrides": {
-          "userpassword": "&{esv.sapig.ob.ig.agent.password}"
+          "userpassword": "&{esv.sapig.core.ig.agent.password}"
         }
       }
     ],
@@ -71,7 +71,7 @@
         ],
         "overrides": {
           "coreOAuth2ClientConfig": {
-            "userpassword": "&{esv.sapig.ob.ig.client.password}"
+            "userpassword": "&{esv.sapig.core.ig.client.password}"
           }
         }
       }
@@ -86,7 +86,7 @@
         ],
         "overrides": {
           "jwksUri": {
-            "value": "&{esv.sapig.ob.baseurl}/jwkms/testdirectory/jwks"
+            "value": "&{esv.sapig.core.baseurl}/jwkms/testdirectory/jwks"
           }
         }
       }
