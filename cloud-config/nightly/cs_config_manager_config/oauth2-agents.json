@@ -28,6 +28,9 @@
         "overrides": {
           "jwkSet": {
               "value": "${ESV_SAPIG_OB_RCS_JWKS_1}"
+            },
+          "remoteConsentRedirectUrl": {
+              "value": "${ESV_SAPIG_OB_BASEURL}"
             }
         }
       }
@@ -41,7 +44,9 @@
           "Secure API Gateway Development Trusted Directory"
         ],
         "overrides": {
-          "": "${}"
+          "jwksUri": {
+            "value": "${ESV_SAPIG_OB_BASEURL}"
+          }
         }
       }
     ]
