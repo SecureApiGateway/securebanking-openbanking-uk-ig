@@ -26,9 +26,10 @@
           "secure-open-banking-rcs"
         ],
         "overrides": {
-          "value": "${ESV_SAPIG_OB_RCS_JWKS_1}"
-        },
-        "searchField": "jwkSet"
+          "jwkSet": {
+              "value": "${ESV_SAPIG_OB_RCS_JWKS_1}"
+            }
+        }
       }
     ],
     "SoftwarePublisher": [
