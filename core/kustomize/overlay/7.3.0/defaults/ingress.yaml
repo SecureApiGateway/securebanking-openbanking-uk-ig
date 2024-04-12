@@ -78,20 +78,6 @@ spec:
                   number: 80
             path: /am/
             pathType: Prefix
-          - backend:
-              service:
-                name: ig
-                port:
-                  number: 80
-            path: /rcs/api/
-            pathType: Prefix
-          - backend:
-              service:
-                name: ig
-                port:
-                  number: 80
-            path: /jwksproxy
-            pathType: Prefix
   tls:
     - hosts:
         - $(FQDN)
