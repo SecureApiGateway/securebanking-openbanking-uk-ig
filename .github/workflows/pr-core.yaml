@@ -1,6 +1,6 @@
 name: PR - Build and Deploy
 on:
-  workflow_dispatch: #Temp for testing
+  push: #Temp for testing
   pull_request:
     branches:
       - master
