@@ -13,4 +13,3 @@ jobs:
     with:
       componentName: sapig-openbanking-uk-developer-envs
       sapigType: ob
-      serviceName: secure-api-gateway-ob
