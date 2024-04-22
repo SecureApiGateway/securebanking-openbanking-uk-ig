@@ -1,6 +1,5 @@
 name: PR - Build and Deploy
 on:
-  push: #Temp for testing
   pull_request:
     branches:
       - master
