@@ -1,50 +1,15 @@
-name: Pull Request - Build and Deploy - Core
-
+name: PR - Build and Deploy
 on:
   pull_request:
     branches:
       - master
-    paths: 
+    paths:
       - 'core/**'
-
-env:
-  PR_NUMBER: pr-${{ github.event.number }}
-  SERVICE_NAME: ig-devenv
-  SAPIG_TYPE: core
-
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Get Branch
-        id: branch-name
-        uses: tj-actions/branch-names@v7
-      
-      - name: Auth to GCP
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.DEV_GAR_KEY }}
-
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2.1.0
-
-      - name: Create lowercase Github Username
-        id: toLowerCase
-        run: echo "GITHUB_USER=$(echo ${{github.actor}} | tr '[:upper:]' '[:lower:]')" >> ${GITHUB_ENV}
-      
-      - name: Output User Env Var
-        run: echo "GITHUB_USER set to ${{ env.GITHUB_USER }}"
-      
-      - name: 'Build Environment'
-        uses: codefresh-io/codefresh-pipeline-runner@master
-        with:
-          args: '-v NEWBRANCH=${{ steps.branch-name.outputs.current_branch }} -v SERVICE_NAME=${{ env.SERVICE_NAME }} -v ENVIRONMENT=${{ env.GITHUB_USER }}-${{ env.SAPIG_TYPE }}'
-        env:
-          PIPELINE_NAME: 'SAPIG-devenv/dev-core-service-build'
-          CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          TRIGGER_NAME: github-actions-trigger-devenvs
-          CF_BRANCH: master
-        id: run-pipeline
+  run_pr-template:
+    name: PR - Build and Deploy
+    uses: SecureApiGateway/secure-api-gateway-ci/.github/workflows/reusable-pr.yml@main
+    secrets: inherit
+    with:
+      componentName: sapig-openbanking-uk-developer-envs
+      sapigType: core
