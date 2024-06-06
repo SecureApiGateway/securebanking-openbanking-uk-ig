@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: test-trusted-directory-config
 data:
+  AM_REALM: "alpha"
   IG_TEST_DIRECTORY_ISSUER_NAME: "SAPI-G Test Trusted Directory"
   IG_TEST_DIRECTORY_CA_KEYSTORE_ALIAS: "ca"
   IG_TEST_DIRECTORY_CA_KEYSTORE_PATH: "/secrets/test-trusted-directory/test-trusted-dir.p12"
