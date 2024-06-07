@@ -26,9 +26,9 @@ spec:
         paths:
           - backend:
               service:
-                name: ig
+                name: test-trusted-directory
                 port:
-                  number: 80
+                  number: 81
             path: /jwkms/
             pathType: Prefix
   tls:
