@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
     - name: test-trusted-directory
-      port: 81
+      port: 80
       protocol: TCP
       targetPort: 8080
   selector:

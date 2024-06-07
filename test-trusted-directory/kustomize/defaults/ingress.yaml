@@ -28,7 +28,7 @@ spec:
               service:
                 name: test-trusted-directory
                 port:
-                  number: 81
+                  number: 80
             path: /jwkms/
             pathType: Prefix
   tls:
