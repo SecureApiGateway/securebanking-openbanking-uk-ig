@@ -4,7 +4,7 @@ metadata:
   name: test-trusted-directory-config
 data:
   AM_REALM: "alpha"
-  IG_TEST_DIRECTORY_ISSUER_NAME: "SAPI-G Test Trusted Directory"
+  IG_TEST_DIRECTORY_ISSUER_NAME: "test-publisher"
   IG_TEST_DIRECTORY_CA_KEYSTORE_ALIAS: "ca"
   IG_TEST_DIRECTORY_CA_KEYSTORE_PATH: "/secrets/test-trusted-directory/test-trusted-dir-keystore.p12"
   IG_TEST_DIRECTORY_CA_KEYSTORE_TYPE: "PKCS12"
