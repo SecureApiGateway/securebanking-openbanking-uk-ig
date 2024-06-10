@@ -12,11 +12,11 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-- https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=master
+  - https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=master
+  - ingress.yaml
 
 patchesStrategicMerge:
   - configmap.yaml
-  - ingress.yaml
   - secret.yaml
 
 images:
