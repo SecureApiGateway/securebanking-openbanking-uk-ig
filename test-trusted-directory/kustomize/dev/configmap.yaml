@@ -4,4 +4,3 @@ metadata:
   name: test-trusted-directory-config
 data:
   IG_FQDN: "sapig.dev-core.forgerock.financial"
-  IDENTITY_PLATFORM_FQDN: "iam.dev-core.forgerock.financial"
