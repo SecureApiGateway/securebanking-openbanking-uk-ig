@@ -16,6 +16,7 @@ resources:
 
 patchesStrategicMerge:
   - configmap.yaml
+  - ingress.yaml
   - secret.yaml
 
 images:
