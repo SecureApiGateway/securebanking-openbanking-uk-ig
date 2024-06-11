@@ -3,19 +3,25 @@ kind: ConfigMap
 metadata:
   name: ob-deployment-config
 data:
-  RS_INTERNAL_SVC: test-facility-bank
-  # RCS connection settings for the RS API
-  RS_API_URI: http://test-facility-bank:8080
   # Connection settings for the IG hosted data repo
-  RCS_CONSENT_STORE_URI: http://remote-consent-service:8080/consent/store
-  RCS_API_INTERNAL_SVC: remote-consent-service
-  RCS_UI_INTERNAL_SVC: remote-consent-service-user-interface
-  RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
-  RCS_CONSENT_RESPONSE_JWT_ISSUER: secure-open-banking-rcs
-  OB_ASPSP_ORG_ID: 0015800001041REAAY
-  OB_ASPSP_SOFTWARE_ID: YZyyZHejcCGRrWkh3OfkLI
-  IG_OB_ASPSP_SIGNING_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
-  IG_OB_ASPSP_SIGNING_KEYSTORE_TYPE: PKCS12
-  IG_OB_ASPSP_SIGNING_KEYSTORE_ALIAS: jwtsigner
-  IG_OB_ASPSP_SIGNING_KID: sU72Qz8tTtH9W6EoG-vhEYiQTJc
-
+  IG_OB_ASPSP_SIGNING_KEYSTORE_ALIAS: "jwtsigner"
+  IG_OB_ASPSP_SIGNING_KEYSTORE_TYPE: "PKCS12"
+  IG_OB_ASPSP_SIGNING_KEYSTORE_PATH: "/secrets/open-banking/ig-ob-signing-key.p12"
+  IG_OB_ASPSP_SIGNING_KID: "sU72Qz8tTtH9W6EoG-vhEYiQTJc"
+  IG_TEST_DIRECTORY_CA_KEYSTORE_ALIAS: "ca"
+  IG_TEST_DIRECTORY_CA_KEYSTORE_PATH: "/secrets/test-trusted-directory/test-trusted-dir-keystore.p12"
+  IG_TEST_DIRECTORY_CA_KEYSTORE_TYPE: "PKCS12"
+  IG_TEST_DIRECTORY_ISSUER_NAME: "test-publisher"
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_ALIAS: "jwt-signer"
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_PATH: "/secrets/test-trusted-directory/test-trusted-dir-keystore.p12"
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_TYPE: "PKCS12"
+  OB_ASPSP_ORG_ID: "0015800001041REAAY"
+  OB_ASPSP_SOFTWARE_ID: "YZyyZHejcCGRrWkh3OfkLI"
+  RCS_API_INTERNAL_SVC: "remote-consent-service"
+  RCS_CONSENT_RESPONSE_JWT_ISSUER: "secure-open-banking-rcs"
+  RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: "rcs-jwt-signer"
+  RCS_CONSENT_STORE_URI: "http://remote-consent-service:8080/consent/store"
+  RCS_UI_INTERNAL_SVC: "remote-consent-service-user-interface"
+  # RCS connection settings for the RS API
+  RS_API_URI: "http://test-facility-bank:8080"
+  RS_INTERNAL_SVC: "test-facility-bank"

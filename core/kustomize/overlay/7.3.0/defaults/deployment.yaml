@@ -41,9 +41,6 @@ spec:
           - name: new-truststore
             mountPath: /var/ig/secrets/truststore
             readOnly: true
-          - name: test-trusted-dir-keystore
-            mountPath: /var/ig/secrets/test-trusted-directory
-            readOnly: true
       volumes:
         # Empty volume where the igtruststore will be created by the initContainer, it can then be mounted into the ig container
         - name: new-truststore
@@ -51,8 +48,4 @@ spec:
         - name: ig-truststore-pem
           secret:
             secretName: ig-truststore-pem
-            optional: false
-        - name: test-trusted-dir-keystore
-          secret:
-            secretName: test-trusted-dir-keystore
             optional: false
