@@ -1,4 +1,4 @@
-name: PR - Build and Deploy
+name: PR Core - Build and Deploy
 on:
   pull_request:
     branches:
@@ -7,7 +7,7 @@ on:
       - 'core/**'
 jobs:
   run_pr-template:
-    name: PR - Build and Deploy
+    name: Build and Deploy
     uses: SecureApiGateway/secure-api-gateway-ci/.github/workflows/reusable-pr.yml@main
     secrets: inherit
     with:
