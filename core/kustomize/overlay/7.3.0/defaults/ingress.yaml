@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     nginx.ingress.kubernetes.io/backend-protocol: “HTTPS"
     nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
-    nginx.ingress.kubernetes.io/auth-tls-secret: $(NAMESPACE)/obri-ca
+    nginx.ingress.kubernetes.io/auth-tls-secret: NAMESPACE_PLACEHOLDER/obri-ca
     nginx.ingress.kubernetes.io/auth-tls-verify-client: optional_no_ca
     nginx.ingress.kubernetes.io/large-client-header-buffers: "4 128k"
     nginx.ingress.kubernetes.io/proxy-body-size: 64m
@@ -20,7 +20,7 @@ metadata:
   name: mtls
 spec:
   rules:
-    - host: $(MTLS_FQDN)
+    - host: MTLS_FQDN_PLACEHOLDER
       http:
         paths:
           - backend:
@@ -53,7 +53,7 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - $(MTLS_FQDN)
+        - MTLS_FQDN_PLACEHOLDER
       secretName: obwac
 ---
 # Ingress for access to routes protected with TLS by a ForgeRock cert
@@ -75,7 +75,7 @@ metadata:
   name: forgerock
 spec:
   rules:
-    - host: $(FQDN)
+    - host: FQDN_PLACEHOLDER
       http:
         paths:
           - backend:
@@ -87,7 +87,7 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - $(FQDN)
+        - FQDN_PLACEHOLDER
       secretName: sslcert
 ---
 # Ingress for dev only, provides access to the IG Studio UI
@@ -104,10 +104,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - $(FQDN)
+    - FQDN_PLACEHOLDER
     secretName: sslcert
   rules:
-  - host: $(FQDN)
+  - host: FQDN_PLACEHOLDER
     http:
       paths:
       - backend:
