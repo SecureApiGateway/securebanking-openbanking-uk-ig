@@ -1,11 +1,10 @@
 namespace: nightly-core
 patches:
+  - path: configmap.yaml
   - target:
       version: v1
       kind: Ingress
       name: mtls
     path: patch/ingress/mtls-ingress-patch.yaml
-patchesStrategicMerge:
-  - configmap.yaml
 resources:
   - ../defaults

@@ -1,5 +1,5 @@
 namespace: dbadham-fr-core
-patchesStrategicMerge:
-  - configmap.yaml
+patches:
+  - path: configmap.yaml
 resources:
   - ../defaults

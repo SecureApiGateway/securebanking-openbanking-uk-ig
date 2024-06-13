@@ -1,5 +1,5 @@
 namespace: dev-core
-patchesStrategicMerge:
-  - configmap.yaml
+patches:
+  - path: configmap.yaml
 resources:
   - ../defaults

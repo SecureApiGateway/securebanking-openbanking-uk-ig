@@ -1,5 +1,5 @@
 namespace: bohocode-ob
-patchesStrategicMerge:
-  - configmap.yaml
+patches:
+  - path: configmap.yaml
 resources:
   - ../defaults

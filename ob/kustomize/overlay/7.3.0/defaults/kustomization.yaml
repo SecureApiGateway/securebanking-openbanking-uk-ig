@@ -9,6 +9,8 @@ images:
   newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig
   newTag: latest
 patches:
+  - path: configmap.yaml
+  - path: secret.yaml
   - target:
       group: networking.k8s.io
       version: v1
@@ -32,9 +34,6 @@ patches:
       kind: Secret
       metadata:
         name: openig-secrets-env
-patchesStrategicMerge:
-  - configmap.yaml
-  - secret.yaml
 resources:
   - https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=master
   - ingress.yaml

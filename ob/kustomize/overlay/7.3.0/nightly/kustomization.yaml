@@ -1,5 +1,5 @@
 namespace: nightly-ob
-patchesStrategicMerge:
-  - configmap.yaml
+patches:
+  - path: configmap.yaml
 resources:
   - ../defaults

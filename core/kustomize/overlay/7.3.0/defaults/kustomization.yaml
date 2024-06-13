@@ -2,10 +2,10 @@ images:
   - name: ig
     newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
     newTag: latest
-patchesStrategicMerge:
-  - configmap.yaml
-  - deployment.yaml
-  - secret.yaml
+patches:
+  - path: configmap.yaml
+  - path: deployment.yaml
+  - path: secret.yaml
 resources:
   - ingress.yaml
   - kustomizeConfig
