@@ -2,10 +2,6 @@ images:
   - name: ig
     newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
     newTag: latest
-labels:
-  - includeSelectors: true
-    pairs:
-      app.kubernetes.io/name: forgerock
 patchesStrategicMerge:
   - configmap.yaml
   - deployment.yaml

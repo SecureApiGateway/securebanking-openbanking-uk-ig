@@ -1,15 +1,11 @@
 namespace: nightly-core
-commonLabels:
-  app.kubernetes.io/name: "forgerock"
-resources:
-- ../defaults
-
-patchesStrategicMerge:
-  - configmap.yaml
-
 patches:
   - target:
       version: v1
       kind: Ingress
       name: mtls
     path: patch/ingress/mtls-ingress-patch.yaml
+patchesStrategicMerge:
+  - configmap.yaml
+resources:
+  - ../defaults
