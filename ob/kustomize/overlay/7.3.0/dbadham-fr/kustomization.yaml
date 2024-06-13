@@ -91,12 +91,6 @@ replacements:
           kind: Ingress
           name: mtls
           version: v1
-  - source:
-      fieldPath: metadata.namespace
-      kind: ConfigMap
-      name: test-trusted-directory-config
-      version: v1
-    targets:
       - fieldPaths:
           - metadata.annotations.[nginx.ingress.kubernetes.io/auth-tls-secret]
         options:
