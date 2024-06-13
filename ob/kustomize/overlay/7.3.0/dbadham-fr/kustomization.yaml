@@ -57,6 +57,26 @@ replacements:
           name: mtls
           version: v1
   - source:
+      fieldPath: data.IG_FQDN
+      kind: ConfigMap
+      name: core-deployment-config
+      version: v1
+    targets:
+      - fieldPaths:
+          - spec.rules.0.host
+        select:
+          group: networking.k8s.io
+          kind: Ingress
+          name: test-trusted-directory
+          version: v1
+      - fieldPaths:
+          - spec.tls.0.hosts.0
+        select:
+          group: networking.k8s.io
+          kind: Ingress
+          name: test-trusted-directory
+          version: v1
+  - source:
       fieldPath: metadata.namespace
       kind: ConfigMap
       name: core-deployment-config
