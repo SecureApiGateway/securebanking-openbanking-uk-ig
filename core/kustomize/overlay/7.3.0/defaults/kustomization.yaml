@@ -1,17 +1,16 @@
-namespace: dev
-commonLabels:
-  app.kubernetes.io/name: "forgerock"
-resources:
-- securebanking
-- kustomizeConfig
-- ingress.yaml
-
+images:
+  - name: ig
+    newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
+    newTag: latest
+labels:
+  - includeSelectors: true
+    pairs:
+      app.kubernetes.io/name: forgerock
 patchesStrategicMerge:
-  - secret.yaml
   - configmap.yaml
   - deployment.yaml
-
-images:
-- name: ig
-  newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
-  newTag: latest
+  - secret.yaml
+resources:
+  - ingress.yaml
+  - kustomizeConfig
+  - securebanking

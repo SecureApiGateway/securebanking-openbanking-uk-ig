@@ -1,8 +1,7 @@
-namespace: devops-ob
 commonLabels:
   app.kubernetes.io/name: "forgerock"
-resources:
-- ../defaults
-
+namespace: devops-ob
 patchesStrategicMerge:
   - configmap.yaml
+resources:
+- ../defaults

@@ -1,8 +1,7 @@
-namespace: shaunharrisonfr-ob
 commonLabels:
   app.kubernetes.io/name: "forgerock"
-resources:
-- ../defaults
-
+namespace: shaunharrisonfr-ob
 patchesStrategicMerge:
   - configmap.yaml
+resources:
+- ../defaults
