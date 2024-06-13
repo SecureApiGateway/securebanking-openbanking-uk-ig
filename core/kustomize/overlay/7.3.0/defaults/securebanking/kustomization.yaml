@@ -1,3 +1,5 @@
+configMapGenerator:
+  - name: core-deployment-config
 generatorOptions:
   disableNameSuffixHash: true
 labels:
