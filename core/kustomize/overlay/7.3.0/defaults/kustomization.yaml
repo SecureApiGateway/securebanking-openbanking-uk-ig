@@ -3,9 +3,9 @@ images:
   newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
   newTag: latest
 patches:
-- path: configmap.yaml
-- path: deployment.yaml
-- path: secret.yaml
+  - path: configmap.yaml
+  - path: deployment.yaml
+  - path: secret.yaml
 resources:
-- ingress.yaml
-- securebanking
+  - ingress.yaml
+  - securebanking

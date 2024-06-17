@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,7 +29,6 @@ spec:
             # Path to the pem file containing the certs to copy into the new truststore
             - name: IG_PEM_TRUSTSTORE
               value: "/var/run/secrets/truststore/ig-truststore.pem"
-
       containers:
       - name: ig
         envFrom:
