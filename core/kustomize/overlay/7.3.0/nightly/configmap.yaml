@@ -3,13 +3,14 @@ kind: ConfigMap
 metadata:
   name: core-deployment-config
 data:
-  CLOUD_TYPE: FIDC
-  BASE_FQDN: nightly-core.forgerock.financial
-  IG_FQDN: sapig.nightly-core.forgerock.financial
-  MTLS_FQDN: mtls.sapig.nightly-core.forgerock.financial
-  IDENTITY_PLATFORM_FQDN: openam-sapig-nightly.forgeblocks.com
-  AM_REALM: bravo
-  USER_OBJECT: bravo_user
-  IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: PasswordGrant
-  IDENTITY_GOOGLE_SECRET_STORE_NAME: ESV
-  IDENTITY_GOOGLE_SECRET_STORE_OAUTH2_CA_CERTS_SECRET_NAME: esv-sapig-core-am-oauth2-ca-certs
+  CLOUD_TYPE: "FIDC"
+  BASE_FQDN: "nightly-core.forgerock.financial"
+  IG_FQDN: "sapig.nightly-core.forgerock.financial"
+  MTLS_FQDN: "mtls.sapig.nightly-core.forgerock.financial"
+  TRUSTEDDIR_FQDN: "test-trusted-directory.nightly-core.forgerock.financial"
+  IDENTITY_PLATFORM_FQDN: "openam-sapig-nightly.forgeblocks.com"
+  AM_REALM: "bravo"
+  USER_OBJECT: "bravo_user"
+  IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: "PasswordGrant"
+  IDENTITY_GOOGLE_SECRET_STORE_NAME: "ESV"
+  IDENTITY_GOOGLE_SECRET_STORE_OAUTH2_CA_CERTS_SECRET_NAME: "esv-sapig-core-am-oauth2-ca-certs"
