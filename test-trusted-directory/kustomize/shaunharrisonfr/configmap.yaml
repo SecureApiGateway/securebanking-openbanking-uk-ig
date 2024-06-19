@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: test-trusted-directory-config
 data:
-  IG_FQDN: "sapig.shaunharrisonfr-core.forgerock.financial"
+  TRUSTEDDIR_FQDN: "test-trusted-directory.shaunharrisonfr-core.forgerock.financial"

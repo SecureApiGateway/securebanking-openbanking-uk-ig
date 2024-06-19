@@ -59,7 +59,7 @@ replacements:
   - source:
       fieldPath: data.IG_FQDN
       kind: ConfigMap
-      name: core-deployment-config
+      name: test-trusted-directory-config
       version: v1
     targets:
       - fieldPaths:
