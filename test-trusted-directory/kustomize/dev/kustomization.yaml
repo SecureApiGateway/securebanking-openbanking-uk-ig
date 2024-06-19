@@ -18,7 +18,7 @@ replacements:
           name: test-trusted-directory
           version: v1
   - source:
-      fieldPath: data.IG_FQDN
+      fieldPath: data.TRUSTEDDIR_FQDN
       kind: ConfigMap
       name: test-trusted-directory-config
       version: v1
