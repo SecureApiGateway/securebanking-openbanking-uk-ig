@@ -86,7 +86,7 @@
         ],
         "overrides": {
           "jwksUri": {
-            "value": "&{esv.sapig.core.baseurl}/jwkms/testdirectory/jwks"
+            "value": "&{esv.sapig.core.trusteddirurl}/jwkms/testdirectory/jwks"
           }
         }
       }
