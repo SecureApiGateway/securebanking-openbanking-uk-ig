@@ -1,3 +1,7 @@
+images:
+  - name: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig
+    newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig
+    newTag: latest
 namespace: nightly-ob
 patches:
   - path: configmap.yaml
