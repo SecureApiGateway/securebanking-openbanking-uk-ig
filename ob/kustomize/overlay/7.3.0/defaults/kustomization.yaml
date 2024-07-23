@@ -7,7 +7,7 @@ kind: Kustomization
 images:
 - name: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
   newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig
-  newTag: latest
+  newTag: latest-v4
 patches:
   - path: configmap.yaml
   - path: secret.yaml
