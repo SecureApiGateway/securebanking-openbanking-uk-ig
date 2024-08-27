@@ -110,4 +110,4 @@ spec:
             port:
               number: 80
         path: /ig(/|$)(.*)
-        pathType: Exact
+        pathType: ImplementationSpecific
