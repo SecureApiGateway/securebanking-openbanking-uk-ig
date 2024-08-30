@@ -35,7 +35,7 @@ patches:
       metadata:
         name: openig-secrets-env
 resources:
-  - https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/7.3.0/defaults?ref=master
+  - https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/defaults?ref=1511-template-improvements
   - ingress.yaml
 secretGenerator:
 - name: ob-secrets
