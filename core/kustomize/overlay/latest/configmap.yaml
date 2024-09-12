@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: core-deployment-config
+data:
+  BASE_FQDN: "latest-core.forgerock.financial"
+  IG_FQDN: "sapig.latest-core.forgerock.financial"
+  MTLS_FQDN: "mtls.sapig.latest-core.forgerock.financial"
+  IDENTITY_PLATFORM_FQDN: "iam.latest-core.forgerock.financial"
+  TRUSTEDDIR_FQDN: "test-trusted-directory.latest-core.forgerock.financial"
