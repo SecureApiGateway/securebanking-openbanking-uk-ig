@@ -7,7 +7,7 @@ data:
   BASE_FQDN: "nightly-ob.forgerock.financial"
   IG_FQDN: "sapig.nightly-ob.forgerock.financial"
   MTLS_FQDN: "mtls.sapig.nightly-ob.forgerock.financial"
-  IDENTITY_PLATFORM_FQDN: "openam-sapig-nightly.forgeblocks.com"
+  IDENTITY_PLATFORM_FQDN: "openam-fahrenheit-sm.forgeblocks.com/"
   TRUSTEDDIR_FQDN: "sapig.nightly-ob.forgerock.financial"
   USER_OBJECT: "alpha_user"
   IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: "PasswordGrant"
