@@ -50,9 +50,11 @@
         "userName",
         "givenName",
         "sn",
-        "mail",
-        "password"
+        "mail"
       ],
+      "overrides": {
+        "password": "${ESV_PSU4TEST_PASSWORD}"
+      },
       "searchField": "userName",
       "searchValue": "psu4test"
     }
