@@ -44,19 +44,6 @@
       },
       "searchField": "userName",
       "searchValue": "service_account.ig"
-    },
-    {
-      "fields": [
-        "userName",
-        "givenName",
-        "sn",
-        "mail"
-      ],
-      "overrides": {
-        "password": "${ESV_PSU4TEST_PASSWORD}"
-      },
-      "searchField": "userName",
-      "searchValue": "psu4test"
     }
   ]
 }
