@@ -50,7 +50,8 @@
         "userName",
         "givenName",
         "sn",
-        "mail"
+        "mail",
+        "password"
       ],
       "searchField": "userName",
       "searchValue": "psu4test"
