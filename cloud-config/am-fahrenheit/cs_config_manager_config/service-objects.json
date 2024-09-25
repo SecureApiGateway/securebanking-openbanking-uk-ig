@@ -44,6 +44,16 @@
       },
       "searchField": "userName",
       "searchValue": "service_account.ig"
+    },
+    {
+      "fields": [
+        "userName",
+        "givenName",
+        "sn",
+        "mail"
+      ],
+      "searchField": "userName",
+      "searchValue": "psu4test"
     }
   ]
 }
