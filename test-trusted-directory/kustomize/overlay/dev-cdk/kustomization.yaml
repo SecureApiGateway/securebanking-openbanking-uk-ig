@@ -1,4 +1,4 @@
-namespace: dbadham-fr-core
+namespace: dev-cdk-core
 patches:
   - path: configmap.yaml
 replacements:

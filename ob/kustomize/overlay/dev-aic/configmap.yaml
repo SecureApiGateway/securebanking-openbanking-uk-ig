@@ -4,11 +4,11 @@ metadata:
   name: core-deployment-config
 data:
   CLOUD_TYPE: "FIDC"
-  BASE_FQDN: "nightly-ob.forgerock.financial"
-  IG_FQDN: "sapig.nightly-ob.forgerock.financial"
-  MTLS_FQDN: "mtls.sapig.nightly-ob.forgerock.financial"
+  BASE_FQDN: "dev-aic-ob.forgerock.financial"
+  IG_FQDN: "sapig.dev-aic-ob.forgerock.financial"
+  MTLS_FQDN: "mtls.sapig.dev-aic-ob.forgerock.financial"
   IDENTITY_PLATFORM_FQDN: "openam-sapig-nightly.forgeblocks.com"
-  TRUSTEDDIR_FQDN: "sapig.nightly-ob.forgerock.financial"
+  TRUSTEDDIR_FQDN: "sapig.dev-aic-ob.forgerock.financial"
   USER_OBJECT: "alpha_user"
   IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: "PasswordGrant"
   IDENTITY_GOOGLE_SECRET_STORE_NAME: "ESV"

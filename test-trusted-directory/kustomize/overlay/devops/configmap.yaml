@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: test-trusted-directory-config
 data:
-  TRUSTEDDIR_FQDN: "test-trusted-directory.dev-core.forgerock.financial"
+  TRUSTEDDIR_FQDN: "test-trusted-directory.devops-core.forgerock.financial"

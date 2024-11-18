@@ -1,4 +1,4 @@
-namespace: devops-core
+namespace: dev-aic-core
 patches:
   - path: configmap.yaml
 replacements:

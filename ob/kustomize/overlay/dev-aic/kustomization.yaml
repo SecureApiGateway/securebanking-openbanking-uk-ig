@@ -1,4 +1,4 @@
-namespace: dbadham-fr-ob
+namespace: dev-aic-ob
 patches:
   - path: configmap.yaml
 replacements:
