@@ -1,4 +1,4 @@
-namespace: dev-ob
+namespace: dev-cdk-ob
 patches:
   - path: configmap.yaml
 replacements:
