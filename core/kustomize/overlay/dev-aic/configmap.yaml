@@ -8,7 +8,7 @@ data:
   IG_FQDN: "sapig.dev-aic-core.forgerock.financial"
   MTLS_FQDN: "mtls.sapig.dev-aic-core.forgerock.financial"
   TRUSTEDDIR_FQDN: "test-trusted-directory.dev-aic-core.forgerock.financial"
-  IDENTITY_PLATFORM_FQDN: "openam-fahrenheit-sm.forgeblocks.com"
+  IDENTITY_PLATFORM_FQDN: "openam-sapig-nightly.forgeblocks.com"
   AM_REALM: "bravo"
   USER_OBJECT: "bravo_user"
   IDENTITY_DEFAULT_USER_AUTHENTICATION_SERVICE: "PasswordGrant"
