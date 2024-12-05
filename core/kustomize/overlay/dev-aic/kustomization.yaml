@@ -1,4 +1,4 @@
-namespace: nightly-core
+namespace: dev-aic-core
 patches:
   - path: configmap.yaml
   - target:

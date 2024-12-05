@@ -1,4 +1,4 @@
-namespace: nightly-core
+namespace: openig-nightly-core
 patches:
   - path: configmap.yaml
 replacements:
