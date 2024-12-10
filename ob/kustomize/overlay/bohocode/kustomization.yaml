@@ -20,7 +20,7 @@ replacements:
         select:
           group: networking.k8s.io
           kind: Ingress
-          name: apig
+          name: sapig
           version: v1
       - fieldPaths:
           - spec.tls.0.hosts.0
