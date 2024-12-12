@@ -1,0 +1,524 @@
+apiVersion: v1
+data:
+  AM_REALM: alpha
+  BASE_FQDN: shaunharrisonfr-ob.forgerock.financial
+  CERT_ISSUER: null-issuer
+  CLOUD_TYPE: CDK
+  GATEWAY_DATA_REPO_URI: http://ig:80
+  IDENTITY_PLATFORM_FQDN: iam.shaunharrisonfr-ob.forgerock.financial
+  IG_FQDN: sapig.shaunharrisonfr-ob.forgerock.financial
+  IG_TEST_DIRECTORY_ENABLED: "true"
+  IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
+  MTLS_FQDN: mtls.sapig.shaunharrisonfr-ob.forgerock.financial
+  SAPIG_TYPE: ob
+  TRUSTEDDIR_FQDN: sapig.shaunharrisonfr-ob.forgerock.financial
+  USER_OBJECT: user
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/name: forgerock
+  name: core-deployment-config
+  namespace: shaunharrisonfr-ob
+---
+apiVersion: v1
+data:
+  IG_OB_ASPSP_SIGNING_KEYSTORE_ALIAS: jwtsigner
+  IG_OB_ASPSP_SIGNING_KEYSTORE_PATH: /secrets/open-banking/ig-ob-signing-key.p12
+  IG_OB_ASPSP_SIGNING_KEYSTORE_TYPE: PKCS12
+  IG_OB_ASPSP_SIGNING_KID: sU72Qz8tTtH9W6EoG-vhEYiQTJc
+  IG_TEST_DIRECTORY_CA_KEYSTORE_ALIAS: ca
+  IG_TEST_DIRECTORY_CA_KEYSTORE_PATH: /secrets/test-trusted-directory/test-trusted-dir-keystore.p12
+  IG_TEST_DIRECTORY_CA_KEYSTORE_TYPE: PKCS12
+  IG_TEST_DIRECTORY_ISSUER_NAME: test-publisher
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_ALIAS: jwt-signer
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_PATH: /secrets/test-trusted-directory/test-trusted-dir-keystore.p12
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_TYPE: PKCS12
+  OB_ASPSP_ORG_ID: 0015800001041REAAY
+  OB_ASPSP_SOFTWARE_ID: YZyyZHejcCGRrWkh3OfkLI
+  RCS_API_INTERNAL_SVC: remote-consent-service
+  RCS_CONSENT_RESPONSE_JWT_ISSUER: secure-open-banking-rcs
+  RCS_CONSENT_RESPONSE_JWT_SIGNINGKEYID: rcs-jwt-signer
+  RCS_CONSENT_STORE_URI: http://remote-consent-service:8080/consent/store
+  RCS_UI_INTERNAL_SVC: remote-consent-service-user-interface
+  RS_API_URI: http://test-facility-bank:8080
+  RS_INTERNAL_SVC: test-facility-bank
+kind: ConfigMap
+metadata:
+  name: ob-deployment-config
+  namespace: shaunharrisonfr-ob
+---
+apiVersion: v1
+data:
+  IG_AGENT_ID: aWctYWdlbnQ=
+  IG_AGENT_PASSWORD: cGFzc3dvcmQ=
+  IG_CLIENT_ID: aWctY2xpZW50
+  IG_CLIENT_SECRET: cGFzc3dvcmQ=
+  IG_IDM_PASSWORD: MHBlbkJhbmtpbmch
+  IG_IDM_USER: c2VydmljZV9hY2NvdW50Lmln
+  IG_METRICS_PASSWORD: cGFzc3dvcmQ=
+  IG_METRICS_USERNAME: dXNlcg==
+  IG_TRUSTSTORE_PASSWORD: Y2hhbmdlaXQ=
+kind: Secret
+metadata:
+  labels:
+    app.kubernetes.io/name: forgerock
+  name: core-secrets
+  namespace: shaunharrisonfr-ob
+type: Opaque
+---
+apiVersion: v1
+data:
+  ca.crt: |
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURvekNDQW91Z0F3SUJBZ0lFSm9PLz
+    hqQU5CZ2txaGtpRzl3MEJBUXNGQURCN01Rc3dDUVlEVlFRR0V3SlYKU3pFTk1Bc0dBMVVF
+    Q0JNRVFYWnZiakVRTUE0R0ExVUVCeE1IUW5KcGMzUnZiREVTTUJBR0ExVUVDaE1KUm05eQ
+    paMlZTYjJOck1Sd3dHZ1lEVlFRTEV4Tm1iM0puWlhKdlkyc3VabWx1WVc1amFXRnNNUmt3
+    RndZRFZRUURFeEJ2ClluSnBMV1Y0ZEdWeWJtRnNMV05oTUI0WERURTRNRGd3TWpFMk1UZz
+    FOVm9YRFRJNE1EY3pNREUyTVRnMU5Wb3cKZXpFTE1Ba0dBMVVFQmhNQ1ZVc3hEVEFMQmdO
+    VkJBZ1RCRUYyYjI0eEVEQU9CZ05WQkFjVEIwSnlhWE4wYjJ3eApFakFRQmdOVkJBb1RDVV
+    p2Y21kbFVtOWphekVjTUJvR0ExVUVDeE1UWm05eVoyVnliMk5yTG1acGJtRnVZMmxoCmJE
+    RVpNQmNHQTFVRUF4TVFiMkp5YVMxbGVIUmxjbTVoYkMxallUQ0NBU0l3RFFZSktvWklodm
+    NOQVFFQkJRQUQKZ2dFUEFEQ0NBUW9DZ2dFQkFJczRiUVoxdFZPMDhLWXYvbkFPbi94byto
+    S0hxNTJJTW15RXZodW8wN3dNMVcraApoY3hsbWNlTC8wUmpxOG1HVnFNTW9VREZTK1NJYS
+    s2VHFndDU2ZlpndWQrTzdLbUdXVFBEWlhEb2ZlY1lGVDU2CmI2NHU2QmkwUHNwNWFmc1Nz
+    dDNnV3lDVjViN0RheGxab1EySDhCZnNFUm5tSnVHRy82MzNwM0xQTnpLVHhURkcKUmZOc1
+    dJb0hpK0J3NEdWTDBTVEd4QzNCQ0NFV3I3SllVcFlidUFnTDFUMTdvWUpRcTM4QndMbDVs
+    aXUrVzd6dQo3bk9xR0psZW5CWXdoZlBTOHZsMlVucjRITFNzOG1uMVhZbkQ3SitCbjhyTj
+    hrQnNXb3pCc0Q0SGIzQTkzb21pCk04YzhDbEd6dXF1Q1ZnN05qUlR1YzduMis1ZUxzdlM3
+    c2lXakFwc0NBd0VBQWFNdk1DMHdEQVlEVlIwVEJBVXcKQXdFQi96QWRCZ05WSFE0RUZnUV
+    VKMkhhU0FGVytWelZqUnBiMDg2UWVZSXluL1V3RFFZSktvWklodmNOQVFFTApCUUFEZ2dF
+    QkFGYmNLVmhwdm1DWnoveFNBa05KcjhpbFhLNmd1a05MUEQvQmROS09mbGZNZjBWd3lKUm
+    JnenlaCjdMRWNZNHBMVTdVL1FDQWhnNkJROVVnekw4akZ2MGpLT1hpM0RVTkc1RHhldmNi
+    NWZKeUVnZGVkMm5KdktMSjkKcUhDRTRROElHTVduSUZYNkl2SWlpektYckpnaTJHWHBYbV
+    Bya1ppbjk4ek03eW4zUjBUYUhPSG81QVJHOG44VQptaHVRS1Brb0xvYXd1OW45N1hKK0tC
+    MjdZOG1DNXVZYktlRkwzb2N3Nkcyb0E0OXZ1Q3lXRkh1WkFNTEJ4ZDZICjlmUVZ0b3pLUj
+    JyemxibnBvM3NiNGlKdmZpZDdvNTd5Yk10N0NwRENPbVRLMlFKWGdJbC9tVHNNejJUcm5i
+    STEKT29zR1pYN0hrU2Z6cGhOajBtVDhQOFpNOTcxbFBZWT0KLS0tLS1FTkQgQ0VSVElGSU
+    NBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJREF6Q0NBZXVnQXdJ
+    QkFnSUlmTkJsS3diRGdXMHdEUVlKS29aSWh2Y05BUUVMQlFBd0tURW5NQ1VHQTFVRQpBeE
+    1lVkdWemRDQlVjblZ6ZEdWa0lFUnBjbVZqZEc5eWVTQlNiMjkwSUVOQk1CNFhEVEl6TURF
+    eU5ERTJOREV6Ck5Gb1hEVE16TURFeU1URTJOREV6TkZvd0tURW5NQ1VHQTFVRUF4TWVWR1
+    Z6ZENCVWNuVnpkR1ZrSUVScGNtVmoKZEc5eWVTQlNiMjkwSUVOQk1JSUJJakFOQmdrcWhr
+    aUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBdmhDNQpjQlNMUFp0aDVmcmZyckY5OX
+    VPZDBuVjg5S0xLT0thUnpUZzZpamdrVlJmNmNkMUV5WC9NMWZrTVZBWWhKaWpTCmdQeS9O
+    dVVCMEVNZmJMN3JiWDdkZVNZN3FzaVVxUmtkd1NoTVhacng3RjZQNzNwMnYxVVhoc0tVcG
+    12REVpdGoKT0RzV3ZDcG9LOHRUL0YwSHpqL2VPWitKR2hXUzVoT3FXVC9BT0NJME5JamVD
+    ZFhJdVY5cEFlOWFCVFh3ZmwreQorT2dCdXhQbm5qSjBJZUVWaS9nU2tjOExieHdKM0xCWm
+    l5d0l5WDUvbGVtanUwbWhnSnM1djE0OWpFZTA3OFFUCjNmdDc3bm9TaG1HM0dtMjQxZExi
+    OHRHYnZCQlVwbVB2NVk5cGEzMTJ2eWx5SGo4bG53T0NsNGREK1dyYVNuZ0MKVldBWU1VRF
+    hPWkJ6ZEtVTzNRSURBUUFCb3k4d0xUQWRCZ05WSFE0RUZnUVVRczlhV2N1UnZRSGMrZmRZ
+    bVlQaApGMTV5N1N3d0RBWURWUjBUQkFVd0F3RUIvekFOQmdrcWhraUc5dzBCQVFzRkFBT0
+    NBUUVBSm1WVERKRFRMRjkyCmRhNzBmS1hTM1hueE1HUGpMcGQ4eDB3TDNLUnk3SGtWQThn
+    ZkJmZjFzZXNLeWFCeXVWRkpMVGk1TTJscEQzeTMKUHRMVlVJODFWQVQxVDVJWDRTQzl6U3
+    FkOFZjSkk3b1BuNCtieGh0dHlOcXBnbERrOVltN1l4RkJpWkhJN1BzQwpnWUtERUtLazV1
+    NitCSFAxNnNBMndYaVhTSFd3Z3YyL1dCWnFMRW1ZbDRaeHJrZkpRdEJNTllGNlB5bG9hU2
+    c4ClhzNjBTNnQzc3JQcjhJZUhhc3k2ckhla01VeFdNSzJmRDJxMUN4KzFrSVdqbWtDaWc4
+    ZlIyTitlS0c1cTBpbGgKazdyZzYydjN4S3VTNzRUMHdER2FjQlNsRmFUTldveGJTdkw2aF
+    lPaUp5b2d5NGRTVkZpTGttVUdLdXc4MUs5VQpHTk5aVnJTSk9BPT0KLS0tLS1FTkQgQ0VS
+    VElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJR0V6Q0NBL3
+    VnQXdJQkFnSUVXY1Q5UnpBTkJna3Foa2lHOXcwQkFRc0ZBREJRTVFzd0NRWURWUVFHRXdK
+    SApRakVVTUJJR0ExVUVDaE1MVDNCbGJrSmhibXRwYm1jeEt6QXBCZ05WQkFNVElrOXdaVz
+    VDWVc1cmFXNW5JRkJ5ClpTMVFjbTlrZFdOMGFXOXVJRkp2YjNRZ1EwRXdIaGNOTVRjd09U
+    SXlNVEkwTmpVM1doY05NamN3T1RJeU1UTXgKTmpVM1dqQlRNUXN3Q1FZRFZRUUdFd0pIUW
+    pFVU1CSUdBMVVFQ2hNTFQzQmxia0poYm10cGJtY3hMakFzQmdOVgpCQU1USlU5d1pXNUNZ
+    VzVyYVc1bklGQnlaUzFRY205a2RXTjBhVzl1SUVsemMzVnBibWNnUTBFd2dnRWlNQTBHCk
+    NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDeXlyUmcyakYwMWpYaFgzSVI0
+    NHAzMzhaQm96bjgKV2taYUNOOE1CK0FsQmZ1WEhENm1DLzB2K04vWjRYSTZFNXB6QXJtVG
+    hvOEQ2YTZKRHBBSG1tZWZxR1NxT1hWYgpjbFl2MXRIRmptQzFGdEtxa0ZIVFRNeWhsNDFu
+    RU1vMGRudldBNDViTXNHbTB5TWkvdEVNNVZiNWRTWTRaci8yCkxXZ1VUREZVaXNnVWJ5SU
+    lIVCtMNnF4UFVQQ3BOdUVkK0FXVmM5SzBTbG1oYUMrVUlmVk84M2dFMSs5YXIyZE8KTlNG
+    YUsvYTQ0NVVzNk1ucWdLdmZrdktkYVIwNk9rL0VoR2dpQVpPUmN5WjYxRVlGVlZ6SmV3eT
+    VOckZTRjNtdwppUFl2TXhvVDVieGN3QUV2eHFCWHBURHY4bmpRZlIrY2daRGVsb2VLMVVx
+    bVcvRHBSK2pqM0tOSEFnTUJBQUdqCmdnSHdNSUlCN0RBT0JnTlZIUThCQWY4RUJBTUNBUV
+    l3RWdZRFZSMFRBUUgvQkFnd0JnRUIvd0lCQURDQjRBWUQKVlIwZ0JJSFlNSUhWTUlIU0Jn
+    c3JCZ0VFQWFoMWdRWUJaRENCd2pBcUJnZ3JCZ0VGQlFjQ0FSWWVhSFIwY0RvdgpMMjlpTG
+    5SeWRYTjBhWE11WTI5dEwzQnZiR2xqYVdWek1JR1RCZ2dyQmdFRkJRY0NBakNCaGd5Qmcx
+    VnpaU0J2ClppQjBhR2x6SUVObGNuUnBabWxqWVhSbElHTnZibk4wYVhSMWRHVnpJR0ZqWT
+    JWd2RHRnVZMlVnYjJZZ2RHaGwKSUU5d1pXNUNZVzVyYVc1bklGSnZiM1FnUTBFZ1EyVnlk
+    R2xtYVdOaGRHbHZiaUJRYjJ4cFkybGxjeUJoYm1RZwpRMlZ5ZEdsbWFXTmhkR1VnVUhKaF
+    kzUnBZMlVnVTNSaGRHVnRaVzUwTUdvR0NDc0dBUVVGQndFQkJGNHdYREF5CkJnZ3JCZ0VG
+    QlFjd0FvWW1hSFIwY0RvdkwyOWlMblJ5ZFhOMGFYTXVZMjl0TDI5aWRHVnpkSEp2YjNSal
+    lTNWoKY25Rd0pnWUlLd1lCQlFVSE1BR0dHbWgwZEhBNkx5OXZZaTUwY25WemRHbHpMbU52
+    YlM5dlkzTndNRGNHQTFVZApId1F3TUM0d0xLQXFvQ2lHSm1oMGRIQTZMeTl2WWk1MGNuVn
+    pkR2x6TG1OdmJTOXZZbDl3Y0Y5eWIyOTBZMkV1ClkzSnNNQjhHQTFVZEl3UVlNQmFBRk93
+    NGpndmE4L2szUHBEZWZWOXE1bUROZVVLRE1CMEdBMVVkRGdRV0JCUlEKYzVIR0lYTFRkL1
+    QrQUJJR2dWeDVlVzQvVURBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQWdFQWRSZzJIOXVMd3ps
+    RwpxdkhHakl6MHlkTTF0RWx1akVjV0pwNU1laW9yaWtLMHJNT2x4VlU2WkZCbFhQZk8xQV
+    B1MGNaWHhmSHdXczkxCnpvTkNwR1hlYkM2dGlERlEzK21JNHF5d3RpcHBqQnFiNlNmdDM3
+    TmxrWER6UUVUb21zWTd3RVR1VUozMXhGQTAKRmNjSThXbEFVelVPQkU4T0FHbzVrQVo0Rl
+    RhL25rZDhjMndtdXdTcCs5L3MrZ1FlMEs5Qmt4eXdvUDFXQUVkVQpBYUtXM1JFOXl1VGJI
+    QS9aRi96ejQvUnB3L0ZCL2hZaE94dkRWNnFJbmw1QjdFclNINHI0djREMmppRTZhcEFjCm
+    41TFQrZTBhQmEvRWdHQXhneUFncllwdzFzK1RDVUpvdCsyMjd4UnZYeGVlWnpYYTJpZ3Nk
+    K0M4NDVCR2lTbHQKaHpyMG1xWURZRVdKTWZBcForQmxNdHhhN0s5VDNEMmw2WE12MTJSb0
+    5uRVdlNkg1eGF6VHZCTGlUaWJXM2M1aQpqOFdXS0pOdFFiZ21vb1JQYUtKSWwrMHJtNTRN
+    RkgwRkR4SitQNG1BUjZxYThKUzkxMW5TMjZpQ3NFOUZRVks1CjFkanVjdDM0OUZZQk9WTT
+    U5NS9Ha2tUejlrMXZYdzFCZEQ3MWxOakkwMFlqZjczQUF0dkwvWDRDcFJ6OTJOYWcKc2hT
+    MklhNWEzcWpqRnJqeDd6NGg3UXRNSkdqdVVzalRJL2MreWpJWXdBWjVnZWxGNWd6N2wyZG
+    4zZzZCNDBwdQo3eTFFZXdsZklRaC9IVk1GMFpwRjI5WEw2KzdzaVlRQ0doUDVjTkowNGZv
+    dHpxRFBhVDJYbE9oRTN5TmtqcDgyCnV6Q1d2aExVSmdFM0Q5VjlQTDBYRC95a05FUDBGaW
+    89Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0t
+    LS0tCk1JSUZZRENDQTBpZ0F3SUJBZ0lFV2NUODlqQU5CZ2txaGtpRzl3MEJBUXNGQURCUU
+    1Rc3dDUVlEVlFRR0V3SkgKUWpFVU1CSUdBMVVFQ2hNTFQzQmxia0poYm10cGJtY3hLekFw
+    QmdOVkJBTVRJazl3Wlc1Q1lXNXJhVzVuSUZCeQpaUzFRY205a2RXTjBhVzl1SUZKdmIzUW
+    dRMEV3SGhjTk1UY3dPVEl5TVRFek9UUXlXaGNOTXpjd09USXlNVEl3Ck9UUXlXakJRTVFz
+    d0NRWURWUVFHRXdKSFFqRVVNQklHQTFVRUNoTUxUM0JsYmtKaGJtdHBibWN4S3pBcEJnTl
+    YKQkFNVElrOXdaVzVDWVc1cmFXNW5JRkJ5WlMxUWNtOWtkV04wYVc5dUlGSnZiM1FnUTBF
+    d2dnSWlNQTBHQ1NxRwpTSWIzRFFFQkFRVUFBNElDRHdBd2dnSUtBb0lDQVFDWXVrM3M4SH
+    FsTlFMNmFoSnVIeWJzd0NnSVdrRHY2VTdPCjNXYk5XTmVJUjNQZEFFZDIzRXBwY1QycjZ6
+    OTYrVHJMcUdDZ2RmNnoyWW91TE90NjJBMkpxSjRpSmFWRmp0MGUKOWo1YlFxUGhORVZpZV
+    NxTkI4eGhVbHBHRkVYZGo3R1B3MDNxdlNlcUdJVFNmanNWOVZpOE5aZ1VxdFlLZFpQVgph
+    MUZMM3ZSMVlWTjA1Mm5PL3RGZXdvRm41QWRFQy9TcnBJUHlYazUwU3ZYemJ4OXZCSm5BNk
+    1MSjhDb0k5eU55Ckk3ajZReUwzNU9lVWY2YzdmRFRrTEIyVmYyOVJqTC9ZaEp5NzBHWHQw
+    c1ViTDVOOVJlenI4Smxod0dFUFJwcjAKRCtyS3lZTG9HV0xVdG9Tdll3UEM4NWVQTVdtZG
+    xVd09hQzU5TkxVaWhpeTR1c3pFMnFQMkNKc2xIZE9oZ1drQwpRODZLK3lnYStsQ2g2R1g3
+    cVBaS05uUzNZc2paKzIzbzErWk56YktjT0dzYkNkUC9oWHpUYS9EOGZ5by8wTVRNCnFYc0
+    ViT3Fxb2NEMUNmR052MUJmbjJyYmU0MW9LQXYyZmlFWWY0UXJxOWYxNmpyVEs0ZjNiVUEx
+    Vjd4aXUyWVIKREZkU0o3Q1p2dHJwTHdQWFAvV2VZWmFlTytTSlFxMitBZzY3YUVpKzlBK1
+    p5K1FqV3dqQ29xZ05KR1JaaUVqUQpoVTdnWDZOejlHZVJOVjNSR0hVS1VxUnRGck14dkcw
+    TTFGak9EQzdrb3NFc2NadEk0RmtCVEx0QW9WNFhxT3NMCnRmbTJreHJUQTU4emYrZG5sSW
+    I1MU1uZTYzZjVHVWQ0K0N5YjNTVWN2cUZqNEZRdHpJTzQ0RnZBcnJhRmtDdkMKL3ZpNUlZ
+    QU52UUlEQVFBQm8wSXdRREFPQmdOVkhROEJBZjhFQkFNQ0FRWXdEd1lEVlIwVEFRSC9CQV
+    V3QXdFQgovekFkQmdOVkhRNEVGZ1FVN0RpT0M5cnorVGMra041OVgycm1ZTTE1UW9Nd0RR
+    WUpLb1pJaHZjTkFRRUxCUUFECmdnSUJBQmlkRzZwWGhOTG1MT3pIbDdsUDNqL1NFRTRNcT
+    lEUUxraXJmTTNKZVhtY09CMHhLd3F2cHpKU2plS3gKOStoWWxRUktvckljNVFEMWhMS3Fq
+    RzdDcVVOY0NnUEdYVTk2aW9mY1VQdGhGSStmZ2tKTDZ5TU90bExpaWRsRgpsY2hZbUlIaz
+    JTamhNVVAvVFF6d0hlMkNhMHNzQ1JneUoxREVrYXhrdXJFYjJIOGpaVnBFVmxISnJjM2l0
+    eHpZCm00VW4xMVpoK2JyTnZyWmZjMlBoeTRmdTNIY2twaHhDc0o3NlpicHlpdVo3bFduRF
+    Q2aE9OSCt6RUhJVHNFbVkKc2plMXhSaURSM01KU3R5N3hmMDZxZTdVRUt0c0Znd0d1elMv
+    NElRSVJLS2ZnazFSVVpINld4Sytac0I5SHNZVgpQL3NTVkVaV05VVDN6OU40aHZlSXJQL1
+    NvMEE4dG9BSUQwbk5PcUM1bzl5QmRRVEtOOUlYNU5laDgwMVBUWDE4CjMvdC9PQzJKRUZB
+    UHZvNkl4WHRNcGZJMmFUeHJwQldLSUJYNXhnRnM1bEpIN25KOENLa1dJZEdvNmhocng4SW
+    YKbHBBS3VxK1lYTGhXRld1eXlQNlI4VmZSWFdSdjNaaVpWWHJnc0R4MlJBNFEycjRBRTJC
+    akd4eVlXL3Z4RjczQgozWWYweWkxSUJPUTlkK1ZxVDhoU083NnpZV1krMXI1K3FXenNxVD
+    R0SUlXRzZaQThja2NucGpueGdNL1huRHd0CkpJQ3EzRFI4QzJyU2V5ZWQzeDlDQ3RBYmdL
+    cHZjMmJHV1p0SVNadGk5M1NteTVhb3RNbSs0YUtwbTdFWlJmU3MKRDJrbm5JbjMxYm5hVz
+    NTRG9rTGlHN09uRkZVMmxNa2NybEZGc1RlV3E1U24vWFVECi0tLS0tRU5EIENFUlRJRklD
+    QVRFLS0tLS0K
+kind: Secret
+metadata:
+  labels:
+    app.kubernetes.io/name: forgerock
+  name: mtls-ca-certs
+  namespace: shaunharrisonfr-ob
+type: Opaque
+---
+apiVersion: v1
+data:
+  IG_OB_ASPSP_SIGNING_KEYSTORE_KEYPASS: cGFzc3dvcmQ=
+  IG_OB_ASPSP_SIGNING_KEYSTORE_STOREPASS: cGFzc3dvcmQ=
+  IG_TEST_DIRECTORY_CA_KEYSTORE_KEYPASS: UGFzc3cwcmQ=
+  IG_TEST_DIRECTORY_CA_KEYSTORE_STOREPASS: UGFzc3cwcmQ=
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_KEYPASS: UGFzc3cwcmQ=
+  IG_TEST_DIRECTORY_SIGNING_KEYSTORE_STOREPASS: UGFzc3cwcmQ=
+  MONGODB_CONSENT_PASSWORD: TDNoNXd4czRkRnZW
+  MONGODB_CONSENT_USERNAME: Y29uc2VudA==
+  MONGODB_TEST_FACILITY_PASSWORD: UlZkYjdZdlg5NjdR
+  MONGODB_TEST_FACILITY_USERNAME: dGVzdC1mYWNpbGl0eS1iYW5r
+kind: Secret
+metadata:
+  name: ob-secrets
+  namespace: shaunharrisonfr-ob
+type: Opaque
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ig
+    app.kubernetes.io/component: ig
+    app.kubernetes.io/instance: ig
+    app.kubernetes.io/name: forgerock
+    app.kubernetes.io/part-of: forgerock
+    tier: middle
+  name: ig
+  namespace: shaunharrisonfr-ob
+spec:
+  ports:
+  - name: ig
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: ig
+    app.kubernetes.io/component: ig
+    app.kubernetes.io/instance: ig
+    app.kubernetes.io/name: forgerock
+    app.kubernetes.io/part-of: forgerock
+    tier: middle
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ig
+    app.kubernetes.io/component: ig
+    app.kubernetes.io/instance: ig
+    app.kubernetes.io/name: forgerock
+    app.kubernetes.io/part-of: forgerock
+    tier: middle
+  name: ig
+  namespace: shaunharrisonfr-ob
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ig
+      app.kubernetes.io/component: ig
+      app.kubernetes.io/instance: ig
+      app.kubernetes.io/name: forgerock
+      app.kubernetes.io/part-of: forgerock
+      tier: middle
+  template:
+    metadata:
+      labels:
+        app: ig
+        app.kubernetes.io/component: ig
+        app.kubernetes.io/instance: ig
+        app.kubernetes.io/name: forgerock
+        app.kubernetes.io/part-of: forgerock
+        tier: middle
+    spec:
+      containers:
+      - env:
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        envFrom:
+        - secretRef:
+            name: core-secrets
+        - configMapRef:
+            name: core-deployment-config
+        - configMapRef:
+            name: ob-deployment-config
+        - secretRef:
+            name: ob-secrets
+        image: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig:pr-569
+        imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /kube/liveness
+            port: 8080
+          periodSeconds: 30
+          timeoutSeconds: 5
+        name: ig
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /kube/readiness
+            port: 8080
+          initialDelaySeconds: 5
+        resources:
+          limits:
+            memory: 512Mi
+          requests:
+            cpu: 200m
+            memory: 512Mi
+        volumeMounts:
+        - mountPath: /var/ig/secrets/truststore
+          name: new-truststore
+          readOnly: true
+        - mountPath: /var/ig/secrets/test-trusted-directory
+          name: test-trusted-dir-keystore
+          readOnly: true
+        - mountPath: /var/ig/secrets/open-banking
+          name: ig-ob-signing-key
+          readOnly: true
+      initContainers:
+      - command:
+        - /home/forgerock/import-pem-certs.sh
+        env:
+        - name: TRUSTSTORE_PATH
+          value: /truststore/igtruststore
+        - name: TRUSTSTORE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: IG_TRUSTSTORE_PASSWORD
+              name: core-secrets
+        - name: IG_PEM_TRUSTSTORE
+          value: /var/run/secrets/truststore/ig-truststore.pem
+        image: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig:pr-569
+        imagePullPolicy: Always
+        name: truststore-init
+        volumeMounts:
+        - mountPath: /truststore
+          name: new-truststore
+        - mountPath: /var/run/secrets/truststore
+          name: ig-truststore-pem
+      securityContext:
+        runAsGroup: 0
+        runAsUser: 11111
+      tolerations:
+      - effect: NoSchedule
+        key: kubernetes.io/arch
+        operator: Exists
+      volumes:
+      - emptyDir: {}
+        name: new-truststore
+      - name: ig-truststore-pem
+        secret:
+          optional: false
+          secretName: ig-truststore-pem
+      - name: test-trusted-dir-keystore
+        secret:
+          optional: false
+          secretName: test-trusted-dir-keystore
+      - name: ig-ob-signing-key
+        secret:
+          optional: false
+          secretName: ig-ob-signing-key
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  name: ig-web
+  namespace: shaunharrisonfr-ob
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: sapig.shaunharrisonfr-ob.forgerock.financial
+    http:
+      paths:
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /ig(/|$)(.*)
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - sapig.shaunharrisonfr-ob.forgerock.financial
+    secretName: sapig-tls-cert
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
+    nginx.ingress.kubernetes.io/auth-tls-secret: shaunharrisonfr-ob/mtls-ca-certs
+    nginx.ingress.kubernetes.io/auth-tls-verify-client: optional_no_ca
+    nginx.ingress.kubernetes.io/error-log-level: debug
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/large-client-header-buffers: 4 128k
+    nginx.ingress.kubernetes.io/proxy-body-size: 64m
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
+    nginx.ingress.kubernetes.io/proxy-buffering: "on"
+    nginx.ingress.kubernetes.io/proxy-buffers: 4 256k
+    nginx.ingress.kubernetes.io/proxy-busy-buffers_size: 256k
+  name: mtls
+  namespace: shaunharrisonfr-ob
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: mtls.sapig.shaunharrisonfr-ob.forgerock.financial
+    http:
+      paths:
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /am/oauth2/realms/root/realms/alpha/access_token
+        pathType: Exact
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /am/oauth2/realms/root/realms/alpha/register
+        pathType: Prefix
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /am/oauth2/realms/root/realms/alpha/par
+        pathType: Prefix
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /rs/
+        pathType: Prefix
+  tls:
+  - hosts:
+    - mtls.sapig.shaunharrisonfr-ob.forgerock.financial
+    secretName: mtls-tls-cert
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/error-log-level: debug
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/large-client-header-buffers: 4 128k
+    nginx.ingress.kubernetes.io/proxy-body-size: 64m
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
+    nginx.ingress.kubernetes.io/proxy-buffering: "on"
+    nginx.ingress.kubernetes.io/proxy-buffers: 4 256k
+    nginx.ingress.kubernetes.io/proxy-busy-buffers_size: 256k
+  name: sapig
+  namespace: shaunharrisonfr-ob
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: sapig.shaunharrisonfr-ob.forgerock.financial
+    http:
+      paths:
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - sapig.shaunharrisonfr-ob.forgerock.financial
+    secretName: sapig-tls-cert
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
+    nginx.ingress.kubernetes.io/auth-tls-secret: shaunharrisonfr-ob/mtls-ca-certs
+    nginx.ingress.kubernetes.io/auth-tls-verify-client: optional_no_ca
+    nginx.ingress.kubernetes.io/error-log-level: debug
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/large-client-header-buffers: 4 128k
+    nginx.ingress.kubernetes.io/proxy-body-size: 64m
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
+    nginx.ingress.kubernetes.io/proxy-buffering: "on"
+    nginx.ingress.kubernetes.io/proxy-buffers: 4 256k
+    nginx.ingress.kubernetes.io/proxy-busy-buffers_size: 256k
+  name: test-trusted-directory
+  namespace: shaunharrisonfr-ob
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: sapig.shaunharrisonfr-ob.forgerock.financial
+    http:
+      paths:
+      - backend:
+          service:
+            name: ig
+            port:
+              number: 80
+        path: /jwkms/
+        pathType: Prefix
+  tls:
+  - hosts:
+    - sapig.shaunharrisonfr-ob.forgerock.financial
+    secretName: sapig-tls-cert
