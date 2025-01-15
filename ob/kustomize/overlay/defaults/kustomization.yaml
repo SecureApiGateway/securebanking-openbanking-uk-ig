@@ -9,8 +9,8 @@ images:
   newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/ig
   newTag: latest
 patches:
-  - path: configmap.yaml
-  - path: secret.yaml
+  - path: ob/configmap.yaml
+  - path: ob/secret.yaml
   - target:
       group: apps
       version: v1
