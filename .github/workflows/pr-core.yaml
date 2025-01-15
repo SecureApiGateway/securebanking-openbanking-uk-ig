@@ -12,5 +12,5 @@ jobs:
     uses: SecureApiGateway/secure-api-gateway-ci/.github/workflows/reusable-pr.yml@main
     secrets: inherit
     with:
-      componentName: core-openbanking-uk-developer-envs
+      componentName: sapig-openbanking-uk-developer-envs
       sapigType: core
