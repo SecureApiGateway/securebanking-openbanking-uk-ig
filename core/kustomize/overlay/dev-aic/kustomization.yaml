@@ -108,3 +108,8 @@ replacements:
           version: v1
 resources:
   - ../defaults
+replicas:
+  - name: ig
+    count: 1
+  - name: test-trusted-directory
+    count: 1
