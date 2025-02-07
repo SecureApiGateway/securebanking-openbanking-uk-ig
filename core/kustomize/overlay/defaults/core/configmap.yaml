@@ -24,6 +24,5 @@ data:
   CERT_ISSUER: null-issuer
   # Connection settings for the IG hosted data repo
   GATEWAY_DATA_REPO_URI: http://ig:80
-  IG_TEST_DIRECTORY_ENABLED: "true"
   IG_TRUSTSTORE_PATH: /secrets/truststore/igtruststore
   USER_OBJECT: user
