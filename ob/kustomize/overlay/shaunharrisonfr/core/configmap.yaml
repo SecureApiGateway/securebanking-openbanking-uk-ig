@@ -8,3 +8,4 @@ data:
   MTLS_FQDN: "mtls.sapig.shaunharrisonfr-ob.forgerock.financial"
   IDENTITY_PLATFORM_FQDN: "iam.shaunharrisonfr-ob.forgerock.financial"
   TRUSTEDDIR_FQDN: "test-trusted-directory.shaunharrisonfr-ob.forgerock.financial"
+  IG_TEST_DIRECTORY_ENABLED: "false"
