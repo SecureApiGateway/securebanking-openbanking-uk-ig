@@ -107,4 +107,4 @@ replicas:
   - name: ig
     count: 1
   - name: test-trusted-directory
-    count: 1
+    count: 0
