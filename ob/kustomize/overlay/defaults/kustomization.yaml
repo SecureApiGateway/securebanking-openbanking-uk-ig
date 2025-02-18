@@ -23,6 +23,6 @@ patches:
       name: core-deployment-config
     path: patch/configmap/core-configmap-patch.yaml
 resources:
-  - https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/defaults?ref=master
+  - https://github.com/SecureApiGateway/sapig-openbanking-uk-developer-envs/core/kustomize/overlay/defaults?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
 secretGenerator:
 - name: ob-secrets
