@@ -1,12 +1,21 @@
 namespace: shaunharrisonfr-core
+images:
+  - name: fapi-pep-as
+    newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-core
+    newTag: latest
+  - name: testdirectory
+    newName: europe-west4-docker.pkg.dev/sbat-gcr-develop/sapig-docker-artifact/securebanking/sapig-test-trusted-directory
+    newTag: latest
 patches:
 - path: core/configmap.yaml
+- path: core/secret.yaml
 - path: testtrusteddir/configmap.yaml
+- path: testtrusteddir/secret.yaml
 replacements:
 - source:
-    fieldPath: data.IG_FQDN
+    fieldPath: data.IG_AS_FQDN
     kind: ConfigMap
-    name: core-deployment-config
+    name: as-sapig-deployment-config
     version: v1
   targets:
   - fieldPaths:
@@ -14,14 +23,14 @@ replacements:
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: sapig
+      name: as.sapig
       version: v1
   - fieldPaths:
     - spec.tls.0.hosts.0
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: sapig
+      name: as.sapig
       version: v1
   - fieldPaths:
     - spec.tls.0.hosts.0
@@ -40,7 +49,7 @@ replacements:
 - source:
     fieldPath: data.MTLS_FQDN
     kind: ConfigMap
-    name: core-deployment-config
+    name: as-sapig-deployment-config
     version: v1
   targets:
   - fieldPaths:
@@ -60,7 +69,7 @@ replacements:
 - source:
     fieldPath: metadata.namespace
     kind: ConfigMap
-    name: core-deployment-config
+    name: as-sapig-deployment-config
     version: v1
   targets:
   - fieldPaths:
@@ -102,9 +111,14 @@ replacements:
         name: test-trusted-directory
         version: v1
 resources:
-- ../defaults
+  - https://github.com/SecureApiGateway/secure-api-gateway-core/_infra/kustomize/base?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
+  - https://github.com/SecureApiGateway/secure-api-gateway-test-trusted-directory/_infra/kustomize/base?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
 replicas:
-  - name: ig
+  - name: fapi-pep-as
     count: 1
   - name: test-trusted-directory
     count: 1
+secretGenerator:
+  - name: mtls-ca-certs
+    files:
+      - core/ca.crt
