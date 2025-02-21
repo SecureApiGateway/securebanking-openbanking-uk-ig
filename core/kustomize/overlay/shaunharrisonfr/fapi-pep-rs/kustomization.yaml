@@ -81,6 +81,6 @@ replicas:
   - name: fapi-pep-rs
     count: 1
 secretGenerator:
-  - name: sapig-mtls-ca-certs
+  - name: fapi-pep-rs-mtls-ca-certs
     files:
       - ca.crt
