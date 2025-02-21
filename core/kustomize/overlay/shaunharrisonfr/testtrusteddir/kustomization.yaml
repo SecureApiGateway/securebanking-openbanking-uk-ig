@@ -28,7 +28,7 @@ replacements:
 - source:
     fieldPath: metadata.namespace
     kind: ConfigMap
-    name: as-sapig-deployment-config
+    name: test-trusted-directory-config
     version: v1
   targets:
     - fieldPaths:
