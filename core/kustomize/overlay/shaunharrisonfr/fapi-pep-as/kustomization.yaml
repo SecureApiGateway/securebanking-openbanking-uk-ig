@@ -30,14 +30,14 @@ replacements:
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: ig-web
+      name: as.ig-studio
       version: v1
   - fieldPaths:
     - spec.rules.0.host
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: ig-web
+      name: as.ig-studio
       version: v1
 - source:
     fieldPath: data.MTLS_FQDN
@@ -50,14 +50,14 @@ replacements:
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: mtls
+      name: as.mtls
       version: v1
   - fieldPaths:
     - spec.tls.0.hosts.0
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: mtls
+      name: as.mtls
       version: v1
 - source:
     fieldPath: metadata.namespace
@@ -72,7 +72,7 @@ replacements:
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: mtls
+      name: as.mtls
       version: v1
 resources:
   # SH-ToDo - Update URL
