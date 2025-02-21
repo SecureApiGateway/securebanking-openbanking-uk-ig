@@ -2,10 +2,8 @@ generatorOptions:
   disableNameSuffixHash: true
 namespace: shaunharrisonfr-core
 patches:
-- path: core/configmap.yaml
-- path: core/secret.yaml
-- path: testtrusteddir/configmap.yaml
-- path: testtrusteddir/secret.yaml
+- path: configmap.yaml
+- path: secret.yaml
 replacements:
 - source:
     fieldPath: data.IG_AS_FQDN
@@ -85,39 +83,16 @@ replacements:
       kind: Ingress
       name: test-trusted-directory
       version: v1
-- source:
-    fieldPath: data.TRUSTEDDIR_FQDN
-    kind: ConfigMap
-    name: test-trusted-directory-config
-    version: v1
-  targets:
-    - fieldPaths:
-        - spec.rules.0.host
-      select:
-        group: networking.k8s.io
-        kind: Ingress
-        name: test-trusted-directory
-        version: v1
-    - fieldPaths:
-        - spec.tls.0.hosts.0
-      select:
-        group: networking.k8s.io
-        kind: Ingress
-        name: test-trusted-directory
-        version: v1
 resources:
   # SH-ToDo - Update URL
   - https://github.com/SecureApiGateway/secure-api-gateway-core/_infra/kustomize/base?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
-  - https://github.com/SecureApiGateway/secure-api-gateway-test-trusted-directory/_infra/kustomize/base?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
   # SH-TODO - Remove
-  - core/configmap-temp.yaml
-  - core/secret-temp.yaml
+  - configmap-temp.yaml
+  - secret-temp.yaml
 replicas:
   - name: fapi-pep-as
-    count: 1
-  - name: test-trusted-directory
     count: 1
 secretGenerator:
   - name: mtls-ca-certs
     files:
-      - core/ca.crt
+      - ca.crt
