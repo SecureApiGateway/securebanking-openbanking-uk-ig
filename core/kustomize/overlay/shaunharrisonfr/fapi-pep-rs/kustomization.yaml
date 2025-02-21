@@ -6,9 +6,9 @@ patches:
 - path: secret.yaml
 replacements:
 - source:
-    fieldPath: data.IG_AS_FQDN
+    fieldPath: data.IG_RS_FQDN
     kind: ConfigMap
-    name: as-sapig-deployment-config
+    name: rs-sapig-deployment-config
     version: v1
   targets:
   - fieldPaths:
@@ -42,7 +42,7 @@ replacements:
 - source:
     fieldPath: data.MTLS_FQDN
     kind: ConfigMap
-    name: as-sapig-deployment-config
+    name: rs-sapig-deployment-config
     version: v1
   targets:
   - fieldPaths:
@@ -76,7 +76,7 @@ replacements:
       version: v1
 resources:
   # SH-ToDo - Update URL
-  - https://github.com/SecureApiGateway/secure-api-gateway-fapi-pep-rs/_infra/kustomize/base?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
+  - https://github.com/SecureApiGateway/secure-api-gateway-fapi-pep-rs-core/_infra/kustomize/base?ref=OPENIG-8961-separate-ig-instance-deployments-for-authorisation-server-and-resource-server
 replicas:
   - name: fapi-pep-rs
     count: 1
