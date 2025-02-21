@@ -1,3 +1,5 @@
+generatorOptions:
+  disableNameSuffixHash: true
 namespace: shaunharrisonfr-core
 images:
   - name: fapi-pep-as
