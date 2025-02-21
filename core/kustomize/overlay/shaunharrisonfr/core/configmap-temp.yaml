@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sapig-deployment-config
+  name: core-deployment-config
 data:
   BASE_FQDN: "shaunharrisonfr-core.forgerock.financial"
   IDENTITY_PLATFORM_FQDN: "iam.shaunharrisonfr-core.forgerock.financial"
