@@ -6,7 +6,7 @@ patches:
 - path: secret.yaml
 replacements:
 - source:
-    fieldPath: data.IG_RS_FQDN
+    fieldPath: data.RS_FQDN
     kind: ConfigMap
     name: rs-sapig-deployment-config
     version: v1
