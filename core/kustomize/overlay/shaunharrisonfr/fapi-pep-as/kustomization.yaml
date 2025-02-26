@@ -40,7 +40,7 @@ replacements:
       name: as.ig-studio
       version: v1
 - source:
-    fieldPath: data.MTLS_FQDN
+    fieldPath: data.AS_MTLS_FQDN
     kind: ConfigMap
     name: as-sapig-deployment-config
     version: v1
