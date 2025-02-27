@@ -16,28 +16,14 @@ replacements:
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: rs.sapig
+      name: rs-sapig
       version: v1
   - fieldPaths:
     - spec.tls.0.hosts.0
     select:
       group: networking.k8s.io
       kind: Ingress
-      name: rs.sapig
-      version: v1
-  - fieldPaths:
-    - spec.tls.0.hosts.0
-    select:
-      group: networking.k8s.io
-      kind: Ingress
-      name: rs.ig-studio
-      version: v1
-  - fieldPaths:
-    - spec.rules.0.host
-    select:
-      group: networking.k8s.io
-      kind: Ingress
-      name: rs.ig-studio
+      name: rs-sapig
       version: v1
 resources:
   # SH-ToDo - Update URL
